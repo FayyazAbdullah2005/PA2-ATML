@@ -1,0 +1,46 @@
+{
+  "name": "beta_0.3",
+  "adapter": "outputs/task1_dpo/beta_0.3",
+  "beta": 0.3,
+  "heldout_pairs": {
+    "dpo_loss": 0.6714718321959178,
+    "logit_mean": 0.05036994156738122,
+    "policy_margin_mean": -34.66872477531433,
+    "preference_accuracy": 0.6333333333333333,
+    "raw_preference_accuracy": 0.475,
+    "implied_reward_margin_mean": 0.1679001455505689,
+    "chosen_logp_mean": -298.6515350341797,
+    "rejected_logp_mean": -263.98281173706056,
+    "chosen_tokens_mean": 272.75,
+    "rejected_tokens_mean": 224.775,
+    "chosen_longer_fraction": 0.5333333333333333,
+    "num_pairs": 120,
+    "num_dropped_too_long": 0,
+    "preference_accuracy_stderr": 0.04399073976628701,
+    "beta": 0.3
+  },
+  "heldout_pairs_dropped_too_long": 1,
+  "reference_offsets": {
+    "kl_token_mean": 0.0001039979121205994,
+    "entropy_token_mean": 0.6752330386676849
+  },
+  "generated": {
+    "reward_model_mean": 1.1038466233473558,
+    "reward_model_std": 1.2621753496343535,
+    "length": {
+      "mean": 160.94871794871796,
+      "std": 103.62802034643163,
+      "p25": 43.5,
+      "median": 213.0,
+      "p75": 256.0,
+      "iqr": 212.5,
+      "min": 3.0,
+      "max": 256.0,
+      "n": 39
+    },
+    "eos_termination_rate": 0.5384615384615384,
+    "truncation_rate": 0.46153846153846156,
+    "num_prompts": 39,
+    "samples_file": "results\\task1_dpo\\samples\\beta_0.3_generations.jsonl"
+  }
+}

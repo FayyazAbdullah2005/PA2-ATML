@@ -1,0 +1,15 @@
+$ python -m task3_grpo.analyze_group_size
+
+Cached prompts: 24
+Group sizes to analyze: [2, 4, 8]
+Cache row keys: ['clipped_at_max', 'completion', 'completion_tokens', 'generation_index', 'prompt_id', 'reward', 'source_index', 'terminated_with_eos']
+K=2: groups=96 completions=192 informative=0.938 std=0.3846 signal_var=0.9375
+   low_spread: informative=0.875 std=0.1906
+   high_spread: informative=1.000 std=0.5786
+K=4: groups=48 completions=192 informative=0.958 std=0.5410 signal_var=0.9583
+   low_spread: informative=0.917 std=0.2705
+   high_spread: informative=1.000 std=0.8115
+K=8: groups=24 completions=192 informative=0.958 std=0.6191 signal_var=0.9583
+   low_spread: informative=0.917 std=0.3063
+   high_spread: informative=1.000 std=0.9318
+saved -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task3_grpo\group_size_study.json

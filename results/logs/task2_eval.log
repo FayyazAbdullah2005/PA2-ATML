@@ -1,0 +1,4 @@
+$ python -m task2_ppo.evaluate --adapter outputs/task2_ppo/standard --name standard --limit 40
+
+W1011 18:56:49.356000 37340 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[standard] n=40 reward=1.479 kl=0.0002 len=12560.0 eos=0.900

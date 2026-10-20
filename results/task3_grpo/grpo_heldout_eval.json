@@ -1,0 +1,18 @@
+{
+  "condition": "grpo",
+  "adapter": "outputs/task3_grpo/grpo",
+  "num_prompts": 20,
+  "num_generations": 4,
+  "eval_max_response_length": 512,
+  "reward_model_mean": 1.3191452026367188,
+  "kl_token_mean": -0.00013310237121402224,
+  "entropy_token_mean": 0.7131392139941454,
+  "response_length_mean": 312.9625,
+  "response_length_max": 512,
+  "eos_termination_rate": 0.6625,
+  "truncation_rate": 0.3375,
+  "informative_group_fraction": 0.95,
+  "uninformative_group_fraction": 0.050000000000000044,
+  "within_group_reward_std_mean": 0.7643244370818139,
+  "samples_file": "results\\task3_grpo\\samples\\grpo_generations.jsonl"
+}

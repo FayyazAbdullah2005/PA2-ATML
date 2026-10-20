@@ -1,0 +1,45 @@
+{
+  "name": "standard",
+  "adapter": "outputs/task1_dpo/standard",
+  "beta": 0.1,
+  "heldout_pairs": {
+    "dpo_loss": 0.6681178351243336,
+    "logit_mean": 0.05738615020333479,
+    "policy_margin_mean": -34.251404507954916,
+    "preference_accuracy": 0.6583333333333333,
+    "raw_preference_accuracy": 0.48333333333333334,
+    "implied_reward_margin_mean": 0.5738618388772011,
+    "chosen_logp_mean": -298.95651956001916,
+    "rejected_logp_mean": -264.7051155885061,
+    "chosen_tokens_mean": 272.75,
+    "rejected_tokens_mean": 224.775,
+    "chosen_longer_fraction": 0.5333333333333333,
+    "num_pairs": 120,
+    "num_dropped_too_long": 0,
+    "beta": 0.1
+  },
+  "heldout_pairs_dropped_too_long": 10,
+  "reference_offsets": {
+    "kl_token_mean": 0.0002831067721975463,
+    "entropy_token_mean": 0.697926770360209
+  },
+  "generated": {
+    "reward_model_mean": 1.3788555145263672,
+    "reward_model_std": 1.1883111900638494,
+    "length": {
+      "mean": 165.43333333333334,
+      "std": 102.81421216068439,
+      "p25": 62.0,
+      "median": 247.5,
+      "p75": 256.0,
+      "iqr": 194.0,
+      "min": 2.0,
+      "max": 256.0,
+      "n": 120
+    },
+    "eos_termination_rate": 0.5166666666666667,
+    "truncation_rate": 0.48333333333333334,
+    "num_prompts": 120,
+    "samples_file": "results\\task1_dpo\\samples\\standard_generations.jsonl"
+  }
+}

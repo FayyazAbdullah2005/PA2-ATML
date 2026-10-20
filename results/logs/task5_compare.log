@@ -1,0 +1,40 @@
+$ python -m task5_feedback.compare_feedback
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task5_feedback\compare_feedback.py", line 82, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task5_feedback\compare_feedback.py", line 18, in main
+    transfer = load_json(root / "transfer_eval.json")
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\common\logging_utils.py", line 41, in load_json
+    return json.loads(repo_path(path).read_text(encoding="utf-8"))
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Abdul\\OneDrive\\Desktop\\LMS_Courses\\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\\Assignments\\Programming Assignment 2\\ATML-PA2-LLM-PostTraining\\results\\task5_feedback\\transfer_eval.json'
+$ python -m task5_feedback.compare_feedback
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task5_feedback\compare_feedback.py", line 82, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task5_feedback\compare_feedback.py", line 18, in main
+    transfer = load_json(root / "transfer_eval.json")
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\common\logging_utils.py", line 41, in load_json
+    return json.loads(repo_path(path).read_text(encoding="utf-8"))
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Abdul\\OneDrive\\Desktop\\LMS_Courses\\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\\Assignments\\Programming Assignment 2\\ATML-PA2-LLM-PostTraining\\results\\task5_feedback\\transfer_eval.json'

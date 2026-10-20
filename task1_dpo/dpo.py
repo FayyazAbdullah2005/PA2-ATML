@@ -13,8 +13,19 @@ def dpo_loss(
 ):
     """Return scalar DPO loss plus lightweight diagnostics.
 
-    Validate this implementation against the equation in the assignment manual
-    before using it.
+    Validated against the manual objective
+
+        L_DPO = -E[ log sigma( beta * ( [log pi(y+|x) - log pi_ref(y+|x)]
+                                        -[log pi(y-|x) - log pi_ref(y-|x)] ) ) ]
+
+    The release shipped ``beta * (policy_margin + ref_margin)``, which is a
+    defect: the reference log-ratio must be *subtracted*, because DPO models the
+    *change* in relative likelihood induced by the policy. With the additive
+    form the objective is not a Bradley-Terry loss on the implicit reward
+    ``beta * log pi/pi_ref``; at theta = theta_ref it would return
+    ``-log sigma(2 * beta * ref_margin)`` instead of ``log 2``, so the released
+    version pushes the policy away from the reference and does not vanish at
+    initialisation.
     """
 
     policy_margin = (
@@ -27,10 +38,9 @@ def dpo_loss(
         - ref_rejected_logp
     )
 
-    # Starter implementation:
-    # students must validate the objective carefully.
+    # Implicit reward margin: beta * [ (log pi - log pi_ref)(y+) - (log pi - log pi_ref)(y-) ]
     logits = beta * (
-        policy_margin + ref_margin
+        policy_margin - ref_margin
     )
 
     loss = -F.logsigmoid(

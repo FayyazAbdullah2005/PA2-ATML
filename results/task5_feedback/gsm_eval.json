@@ -1,0 +1,247 @@
+{
+  "description": "Task 5: matched evaluation of the SFT, RLVR and RLAIF policies. The policy family, prompt set, decoding configuration and length cap are identical across conditions; only the feedback source used for training differs.",
+  "dataset": "gsm",
+  "decoding": {
+    "greedy": false,
+    "max_new_tokens": 512,
+    "seed": 6304
+  },
+  "policies": {
+    "sft": {
+      "exact_accuracy": 0.38,
+      "format_compliance": 0.46,
+      "mean_response_tokens": 272.2866666666667,
+      "median_response_tokens": 259,
+      "num_problems": 150
+    },
+    "rlvr": {
+      "exact_accuracy": 0.36,
+      "format_compliance": 0.4533333333333333,
+      "mean_response_tokens": 273.50666666666666,
+      "median_response_tokens": 259,
+      "num_problems": 150,
+      "pairwise_vs_sft": {
+        "win": 4,
+        "tie": 138,
+        "loss": 8,
+        "win_rate": 0.4866666666666667,
+        "judge_tie_rate": 0.92,
+        "num_comparisons": 150
+      }
+    },
+    "rlaif": {
+      "exact_accuracy": 0.37333333333333335,
+      "format_compliance": 0.46,
+      "mean_response_tokens": 268.02666666666664,
+      "median_response_tokens": 258,
+      "num_problems": 150,
+      "pairwise_vs_sft": {
+        "win": 2,
+        "tie": 142,
+        "loss": 6,
+        "win_rate": 0.4866666666666667,
+        "judge_tie_rate": 0.9466666666666667,
+        "num_comparisons": 150
+      }
+    }
+  },
+  "verifier_judge_agreement": {
+    "definition": "Over response pairs for the same problem where the exact verifier assigns different rewards, the fraction of pairs the AI pairwise judge prefers the verifier-correct response.",
+    "num_pairs": 24,
+    "agreement": 0.3333333333333333,
+    "disagreements": [
+      {
+        "problem_id": "92",
+        "pair": [
+          "sft",
+          "rlvr"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "rlvr"
+        ],
+        "sft": "Step 1: Determine James' age.\nJames is given as 10 years old and it's stated that he is 1 year younger than Corey.\n\nStep 2: Calculate Corey's age.\nSince James is 1 year younger than Corey:\nCorey = James + 1\nCorey = 10 + 1\nCorey = 11 years old\n\nStep 3: Use the information about Amy's ages to find out which child she is related to.\nWe know from the problem statement that Amy is 5 years older than Ja"
+      },
+      {
+        "problem_id": "92",
+        "pair": [
+          "sft",
+          "rlaif"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "rlaif"
+        ],
+        "sft": "Step 1: Determine James' age.\nJames is given as 10 years old and it's stated that he is 1 year younger than Corey.\n\nStep 2: Calculate Corey's age.\nSince James is 1 year younger than Corey:\nCorey = James + 1\nCorey = 10 + 1\nCorey = 11 years old\n\nStep 3: Use the information about Amy's ages to find out which child she is related to.\nWe know from the problem statement that Amy is 5 years older than Ja"
+      },
+      {
+        "problem_id": "1005",
+        "pair": [
+          "sft",
+          "rlvr"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "Step 1: Determine the number of female porcupines.\nThe number of female porcupines is given as 3/5 of the total population.\nTotal population = 50\nNumber of female porcupines = (3/5) * Total population\n\nLet's calculate this:\nNumber of female porcupines = (3/5) * 50 = 30\n\nStep 2: Calculate the total number of pregnancies per month.\nEach female porcupine gives birth to 4 babies every month.\n\nTotal pr"
+      },
+      {
+        "problem_id": "1005",
+        "pair": [
+          "rlvr",
+          "rlaif"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "rlaif"
+        ],
+        "sft": null
+      },
+      {
+        "problem_id": "688",
+        "pair": [
+          "sft",
+          "rlvr"
+        ],
+        "judge_preference": "B",
+        "verifier_correct": [
+          "rlvr"
+        ],
+        "sft": "To determine how many minutes John has to nap, we need to calculate the total time spent on his homework and then subtract that from the total amount of time available for him before dinner.\n\nFirst, let's convert all times into minutes:\n- Math homework: 20 minutes\n- Reading homework: 40 minutes\n- History homework: 20 minutes\n- Time until dinner: 3 hours\n\nNext, add up the total time spent on homewo"
+      },
+      {
+        "problem_id": "688",
+        "pair": [
+          "rlvr",
+          "rlaif"
+        ],
+        "judge_preference": "B",
+        "verifier_correct": [
+          "rlvr"
+        ],
+        "sft": null
+      },
+      {
+        "problem_id": "466",
+        "pair": [
+          "sft",
+          "rlvr"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "Step 1: Calculate the total cost of apples that Becky paid.\nBecky bought 20 apples at 45 cents each, but she got a $1 discount.\nTotal cost = (Number of apples * Price per apple) - Discount\nTotal cost = (20 * 0.45) - 1\n\nStep 2: Calculate the total cost of apples that Kelly paid.\nKelly bought 20 apples at 50 cents each, and she received a 10% discount.\nDiscount on apples = 10/100 * Total cost of app"
+      },
+      {
+        "problem_id": "466",
+        "pair": [
+          "sft",
+          "rlaif"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "Step 1: Calculate the total cost of apples that Becky paid.\nBecky bought 20 apples at 45 cents each, but she got a $1 discount.\nTotal cost = (Number of apples * Price per apple) - Discount\nTotal cost = (20 * 0.45) - 1\n\nStep 2: Calculate the total cost of apples that Kelly paid.\nKelly bought 20 apples at 50 cents each, and she received a 10% discount.\nDiscount on apples = 10/100 * Total cost of app"
+      },
+      {
+        "problem_id": "305",
+        "pair": [
+          "sft",
+          "rlvr"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "To solve this problem, we need to determine how many of the 20 people John competed against he lost to. Here's the step-by-step process:\n\n1. **Determine the percentage of losses**: John beat 80% of his opponents. This means that he lost 20% of his opponents because 100% - 80% = 20%.\n\n2. **Calculate the number of losses**: We know that there were 20 people in total and he won 80% of these matches. "
+      },
+      {
+        "problem_id": "305",
+        "pair": [
+          "rlvr",
+          "rlaif"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "rlaif"
+        ],
+        "sft": null
+      },
+      {
+        "problem_id": "571",
+        "pair": [
+          "sft",
+          "rlaif"
+        ],
+        "judge_preference": "B",
+        "verifier_correct": [
+          "rlaif"
+        ],
+        "sft": "Step 1: Calculate the cost of spaying the kitten.\nThe cost of spaying is given as $200.\n\nStep 2: Calculate the total cost of the vaccinations.\nEach vaccine costs $20, and there are three vaccines.\nTotal cost for vaccinations = 3 * $20\n\nStep 3: Calculate the total cost of the broken vases.\nEach vase breaks into 4 pieces, and each piece costs $12 to replace.\nTotal cost for broken vases = 4 * 4 * $12"
+      },
+      {
+        "problem_id": "571",
+        "pair": [
+          "rlvr",
+          "rlaif"
+        ],
+        "judge_preference": "B",
+        "verifier_correct": [
+          "rlaif"
+        ],
+        "sft": null
+      },
+      {
+        "problem_id": "579",
+        "pair": [
+          "sft",
+          "rlvr"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "Step 1: Determine how many cards the boy's brother has.\n- The boy has 5 cards.\n- His brother has 3 fewer cards than him.\n\nTo find out how many cards his brother has:\n\\[ \\text{Number of cards brother has} = \\text{Number of cards boy has} - 3 \\]\n\\[ \\text{Number of cards brother has} = 5 - 3 \\]\n\\[ \\text{Number of cards brother has} = 2 \\]\n\nStep 2: Calculate the total number of cards both have togethe"
+      },
+      {
+        "problem_id": "579",
+        "pair": [
+          "sft",
+          "rlaif"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "Step 1: Determine how many cards the boy's brother has.\n- The boy has 5 cards.\n- His brother has 3 fewer cards than him.\n\nTo find out how many cards his brother has:\n\\[ \\text{Number of cards brother has} = \\text{Number of cards boy has} - 3 \\]\n\\[ \\text{Number of cards brother has} = 5 - 3 \\]\n\\[ \\text{Number of cards brother has} = 2 \\]\n\nStep 2: Calculate the total number of cards both have togethe"
+      },
+      {
+        "problem_id": "986",
+        "pair": [
+          "sft",
+          "rlvr"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "rlvr"
+        ],
+        "sft": "To solve this problem, we'll break it down into smaller steps:\n\n### Step 1: Calculate the total number of petunias needed for all 5 hanging baskets.\n- Each basket gets 3 petunias.\n- There are 5 baskets in total.\n\\[ \\text{Total petunias} = 3 \\times 5 = 15 \\]\n\n### Step 2: Calculate the total number of sweet potato vines needed for all 5 hanging baskets.\n- Each basket gets 2 sweet potato vines.\n- The"
+      },
+      {
+        "problem_id": "986",
+        "pair": [
+          "rlvr",
+          "rlaif"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "rlvr"
+        ],
+        "sft": null
+      }
+    ]
+  }
+}

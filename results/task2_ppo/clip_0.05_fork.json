@@ -1,0 +1,28 @@
+{
+  "condition": "clip_0.05",
+  "clip_epsilon": 0.05,
+  "adapter": "outputs/task2_ppo/clip_0.05",
+  "heldout": {
+    "condition": "clip_0.05",
+    "adapter": "outputs/task2_ppo/clip_0.05",
+    "num_prompts": 20,
+    "eval_max_response_length": 768,
+    "reward_model_mean": 1.98651123046875,
+    "reward_model_mean_penalized": 1.88651123046875,
+    "kl_token_mean": 4.110238360226504e-05,
+    "entropy_token_mean": 0.7193963536992669,
+    "response_length_mean": 362.9,
+    "response_length_max": 768,
+    "eos_termination_rate": 0.9,
+    "truncation_rate": 0.1,
+    "samples_file": "results\\task2_ppo\\samples\\clip_0.05_generations.jsonl"
+  },
+  "stability": {
+    "reward_volatility_mean_abs_delta": 2.445521763392857,
+    "policy_loss_range": 0.0012183653634565417,
+    "policy_grad_norm_max": 2.3653522729873657,
+    "policy_grad_norm_mean": 0.6805648095905781,
+    "clip_fraction_mean": 0.0031250000465661287,
+    "kl_last_third_mean": -0.0003008058702107519
+  }
+}

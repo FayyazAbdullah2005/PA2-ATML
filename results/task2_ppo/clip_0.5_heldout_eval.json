@@ -1,0 +1,15 @@
+{
+  "condition": "clip_0.5",
+  "adapter": "outputs/task2_ppo/clip_0.5",
+  "num_prompts": 20,
+  "eval_max_response_length": 768,
+  "reward_model_mean": 1.951666259765625,
+  "reward_model_mean_penalized": 1.801666259765625,
+  "kl_token_mean": -0.00011473649938125164,
+  "entropy_token_mean": 0.7850057892501354,
+  "response_length_mean": 355.6,
+  "response_length_max": 768,
+  "eos_termination_rate": 0.85,
+  "truncation_rate": 0.15,
+  "samples_file": "results\\task2_ppo\\samples\\clip_0.5_generations.jsonl"
+}

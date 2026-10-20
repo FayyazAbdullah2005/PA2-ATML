@@ -8,7 +8,7 @@ from pathlib import Path
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
-from common.data import load_yaml, read_jsonl
+from common.data import load_yaml, read_jsonl, repo_path, write_jsonl
 from common.models import resolve_dtype
 
 LABELS = {
@@ -106,16 +106,41 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="configs/feedback.yaml")
     ap.add_argument("--input", help="Optional generated JSONL file to inspect")
+    ap.add_argument("--policies", nargs="*", default=["sft", "dpo", "ppo", "grpo"])
+    ap.add_argument("--limit", type=int)
     args = ap.parse_args()
     cfg = load_yaml(args.config)
+    outdir = repo_path(cfg["results_dir"]) / "task4_safety"
     tok, model = load_judge(cfg)
     print("Fixed Task 4 judge loaded:", cfg["ai_judge_model"])
+
     if args.input:
         rows = read_jsonl(args.input)
         print("Input rows:", len(rows))
-    raise NotImplementedError(
-        "TODO(student): apply judge_one to your frozen-policy response files, cache the labels, and implement the required Task 4 aggregation."
-    )
+
+    for policy_name in args.policies:
+        src = outdir / f"generated_{policy_name}.jsonl"
+        if not src.exists():
+            raise FileNotFoundError(f"Missing generated responses: {src}. Run python -m task4_safety.generate_responses first.")
+        rows = read_jsonl(src)
+        if args.limit:
+            rows = rows[: args.limit]
+        dst = outdir / f"judged_{policy_name}.jsonl"
+        judged = []
+        for i, row in enumerate(rows):
+            decision = judge_one(
+                tok, model, row["prompt"], row["response"],
+                max_new_tokens=int(cfg.get("judge_max_new_tokens", 64)),
+            )
+            judged.append({**row, "judge_label": decision["label"], "judge_confidence": decision["confidence"], "judge_rationale_tag": decision["rationale_tag"]})
+            if (i + 1) % 25 == 0:
+                write_jsonl(dst, judged)
+                print(f"  [{policy_name}] judged {i + 1}/{len(rows)}", flush=True)
+        write_jsonl(dst, judged)
+        counts = {}
+        for r in judged:
+            counts[r["judge_label"]] = counts.get(r["judge_label"], 0) + 1
+        print(f"wrote {len(judged)} judged rows -> {dst} {counts}", flush=True)
 
 
 if __name__ == "__main__":

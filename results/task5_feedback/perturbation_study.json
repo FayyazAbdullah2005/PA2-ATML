@@ -1,0 +1,128 @@
+{
+  "description": "Task 5 Step 2: controlled reward diagnostics. Each released problem contributes one controlled pair per perturbation, always against the clean, correct response. 'better' means the mechanism prefers the diagnostically better response, 'wrong' means it prefers the degraded one, 'tie' means the mechanism cannot separate them (for the binary verifier this is the expected outcome whenever the designated final answer is unchanged).",
+  "definitions": {
+    "S_reason": "corrupt_reasoning_correct_final vs clean_correct (final answer held correct, reasoning degraded)",
+    "S_outcome": "good_reasoning_wrong_final vs clean_correct (reasoning held correct, designated final answer changed)",
+    "filler_susceptibility": "persuasive_filler_correct vs clean_correct (verbosity/persuasion probe)",
+    "distractor_robustness": "gold_distractor_wrong_final vs clean_correct (gold number present as a distractor)"
+  },
+  "num_problems": 20,
+  "by_variant": {
+    "clean_correct": {
+      "diagnostic_question": "reference response every controlled pair is measured against",
+      "baseline": null,
+      "is_reference": true,
+      "num_pairs": 20,
+      "rlvr": {
+        "better": 0.0,
+        "tie": 1.0,
+        "wrong": 0.0
+      },
+      "rlaif": {
+        "better": 0.0,
+        "tie": 1.0,
+        "wrong": 0.0
+      },
+      "note": "Reference arm: preference rates are undefined because it is compared against nothing. verifier_correct_rate is the share of these responses whose designated final answer matches gold.",
+      "verifier_correct_rate": 1.0,
+      "judge_beat_the_degraded_variant_fraction": 0.0625
+    },
+    "corrupt_reasoning_correct_final": {
+      "diagnostic_question": "reasoning_sensitivity",
+      "baseline": "clean_correct",
+      "num_pairs": 20,
+      "rlvr": {
+        "better": 0.0,
+        "tie": 1.0,
+        "wrong": 0.0
+      },
+      "rlaif": {
+        "better": 0.0,
+        "tie": 1.0,
+        "wrong": 0.0
+      }
+    },
+    "good_reasoning_wrong_final": {
+      "diagnostic_question": "outcome_sensitivity",
+      "baseline": "clean_correct",
+      "num_pairs": 20,
+      "rlvr": {
+        "better": 1.0,
+        "tie": 0.0,
+        "wrong": 0.0
+      },
+      "rlaif": {
+        "better": 0.1,
+        "tie": 0.9,
+        "wrong": 0.0
+      }
+    },
+    "persuasive_filler_correct": {
+      "diagnostic_question": "filler_susceptibility",
+      "baseline": "clean_correct",
+      "num_pairs": 20,
+      "rlvr": {
+        "better": 0.0,
+        "tie": 1.0,
+        "wrong": 0.0
+      },
+      "rlaif": {
+        "better": 0.0,
+        "tie": 0.75,
+        "wrong": 0.25
+      }
+    },
+    "gold_distractor_wrong_final": {
+      "diagnostic_question": "distractor_robustness",
+      "baseline": "clean_correct",
+      "num_pairs": 20,
+      "rlvr": {
+        "better": 1.0,
+        "tie": 0.0,
+        "wrong": 0.0
+      },
+      "rlaif": {
+        "better": 0.15,
+        "tie": 0.8,
+        "wrong": 0.05
+      }
+    }
+  },
+  "S_reason": {
+    "num_pairs": 20,
+    "rlvr": 0.0,
+    "rlaif": 0.0,
+    "rlvr_tie": 1.0,
+    "rlaif_tie": 1.0,
+    "rlvr_wrong": 0.0,
+    "rlaif_wrong": 0.0
+  },
+  "S_outcome": {
+    "num_pairs": 20,
+    "rlvr": 1.0,
+    "rlaif": 0.1,
+    "rlvr_tie": 0.0,
+    "rlaif_tie": 0.9,
+    "rlvr_wrong": 0.0,
+    "rlaif_wrong": 0.0
+  },
+  "filler_susceptibility": {
+    "num_pairs": 20,
+    "rlvr": 0.0,
+    "rlaif": 0.0,
+    "rlvr_tie": 1.0,
+    "rlaif_tie": 0.75,
+    "rlvr_wrong": 0.0,
+    "rlaif_wrong": 0.25
+  },
+  "distractor_robustness": {
+    "num_pairs": 20,
+    "rlvr": 1.0,
+    "rlaif": 0.15,
+    "rlvr_tie": 0.0,
+    "rlaif_tie": 0.8,
+    "rlvr_wrong": 0.0,
+    "rlaif_wrong": 0.05
+  },
+  "verifier_judge_pair_agreement": 0.5625
+}

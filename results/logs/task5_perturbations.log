@@ -1,0 +1,17 @@
+$ python -m task5_feedback.score_perturbations
+
+W1011 10:26:30.651000 35296 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Diagnostic problems: 20
+Variants/problem: ['clean_correct', 'corrupt_reasoning_correct_final', 'gold_distractor_wrong_final', 'good_reasoning_wrong_final', 'persuasive_filler_correct']
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|#####     | 1/2 [00:04<00:04,  4.49s/it]Loading checkpoint shards: 100%|##########| 2/2 [00:06<00:00,  3.24s/it]Loading checkpoint shards: 100%|##########| 2/2 [00:06<00:00,  3.42s/it]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+corrupt_reasoning_correct_final    rlvr: better=0.000 tie=1.000 wrong=0.000
+corrupt_reasoning_correct_final    rlaif: better=0.000 tie=1.000 wrong=0.000
+good_reasoning_wrong_final         rlvr: better=0.000 tie=0.000 wrong=1.000
+good_reasoning_wrong_final         rlaif: better=0.000 tie=0.900 wrong=0.100
+persuasive_filler_correct          rlvr: better=0.000 tie=1.000 wrong=0.000
+persuasive_filler_correct          rlaif: better=0.250 tie=0.750 wrong=0.000
+gold_distractor_wrong_final        rlvr: better=0.000 tie=0.000 wrong=1.000
+gold_distractor_wrong_final        rlaif: better=0.050 tie=0.800 wrong=0.150
+saved -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task5_feedback\perturbation_study.json

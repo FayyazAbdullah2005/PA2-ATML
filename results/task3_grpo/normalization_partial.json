@@ -1,0 +1,76 @@
+{
+  "conditions": [
+    {
+      "condition": "grpo",
+      "loss_type": "grpo",
+      "adapter": "outputs\\task3_grpo\\grpo",
+      "fork_updates": 8,
+      "heldout": {
+        "condition": "grpo",
+        "adapter": "outputs/task3_grpo/grpo",
+        "num_prompts": 20,
+        "num_generations": 4,
+        "eval_max_response_length": 512,
+        "reward_model_mean": 1.3191452026367188,
+        "kl_token_mean": -0.00013310237121402224,
+        "entropy_token_mean": 0.7131392139941454,
+        "response_length_mean": 312.9625,
+        "response_length_max": 512,
+        "eos_termination_rate": 0.6625,
+        "truncation_rate": 0.3375,
+        "informative_group_fraction": 0.95,
+        "uninformative_group_fraction": 0.050000000000000044,
+        "within_group_reward_std_mean": 0.7643244370818139,
+        "samples_file": "results\\task3_grpo\\samples\\grpo_generations.jsonl"
+      },
+      "length_gradient": {},
+      "trajectory": {
+        "reward_first_third": 2.4539794921875,
+        "reward_last_third": -0.4171142578125,
+        "kl_first_third": 6.429148334063939e-05,
+        "kl_last_third": -0.00040970304689835757,
+        "length_first_third": 331.25,
+        "length_last_third": 125.875,
+        "informative_group_fraction_last_third": 1.0
+      },
+      "wall_time_s": 161.955,
+      "peak_vram_gb": 7.5961
+    },
+    {
+      "condition": "dr_grpo",
+      "loss_type": "dr_grpo",
+      "adapter": "outputs\\task3_grpo\\dr_grpo",
+      "fork_updates": 8,
+      "heldout": {
+        "condition": "dr_grpo",
+        "adapter": "outputs/task3_grpo/dr_grpo",
+        "num_prompts": 20,
+        "num_generations": 4,
+        "eval_max_response_length": 512,
+        "reward_model_mean": 1.3349838256835938,
+        "kl_token_mean": -0.00015614313239069587,
+        "entropy_token_mean": 0.7415264775976539,
+        "response_length_mean": 312.6375,
+        "response_length_max": 512,
+        "eos_termination_rate": 0.675,
+        "truncation_rate": 0.325,
+        "informative_group_fraction": 0.95,
+        "uninformative_group_fraction": 0.050000000000000044,
+        "within_group_reward_std_mean": 0.7026094950735569,
+        "samples_file": "results\\task3_grpo\\samples\\dr_grpo_generations.jsonl"
+      },
+      "length_gradient": {},
+      "trajectory": {
+        "reward_first_third": 2.4053955078125,
+        "reward_last_third": -0.45892333984375,
+        "kl_first_third": 0.00010039855624199845,
+        "kl_last_third": -1.949108627741225e-05,
+        "length_first_third": 355.5,
+        "length_last_third": 178.0,
+        "informative_group_fraction_last_third": 1.0
+      },
+      "wall_time_s": 159.351,
+      "peak_vram_gb": 7.5943
+    }
+  ]
+}

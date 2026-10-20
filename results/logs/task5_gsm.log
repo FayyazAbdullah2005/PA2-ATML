@@ -1,0 +1,18 @@
+$ python -m task5_feedback.evaluate_math --dataset gsm --limit 150
+
+Rows: 150
+Policies: ['sft', 'rlvr', 'rlaif']
+=== generating sft responses ===
+  exact=0.380 format=0.460 len=272.3
+=== generating rlvr responses ===
+W1011 10:13:57.248000 21464 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+  exact=0.360 format=0.453 len=273.5
+=== generating rlaif responses ===
+  exact=0.373 format=0.460 len=268.0
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|#####     | 1/2 [00:05<00:05,  5.95s/it]Loading checkpoint shards: 100%|##########| 2/2 [00:08<00:00,  4.04s/it]Loading checkpoint shards: 100%|##########| 2/2 [00:08<00:00,  4.33s/it]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+  [rlvr] pairwise win rate vs sft = 0.487
+  [rlaif] pairwise win rate vs sft = 0.487
+  verifier/judge agreement on separating pairs = 8/24
+saved -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task5_feedback\gsm_eval.json

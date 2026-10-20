@@ -1,0 +1,15 @@
+{
+  "condition": "kl_0",
+  "adapter": "outputs/task2_ppo/kl_0",
+  "num_prompts": 20,
+  "eval_max_response_length": 768,
+  "reward_model_mean": 1.99359130859375,
+  "reward_model_mean_penalized": 1.79359130859375,
+  "kl_token_mean": -0.00012211050753876406,
+  "entropy_token_mean": 0.7088605381548405,
+  "response_length_mean": 381.5,
+  "response_length_max": 768,
+  "eos_termination_rate": 0.8,
+  "truncation_rate": 0.2,
+  "samples_file": "results\\task2_ppo\\samples\\kl_0_generations.jsonl"
+}

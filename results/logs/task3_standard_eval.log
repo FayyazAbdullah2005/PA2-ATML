@@ -1,0 +1,3 @@
+$ python -m task3_grpo.evaluate --adapter outputs/task3_grpo/standard --name standard
+
+W1011 19:11:45.875000 27724 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels

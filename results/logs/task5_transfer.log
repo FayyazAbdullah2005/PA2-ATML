@@ -1,0 +1,38 @@
+$ python -m task5_feedback.evaluate_math --dataset transfer
+
+Rows: 100
+Policies: ['sft', 'rlvr', 'rlaif']
+=== generating sft responses ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task5_feedback\evaluate_math.py", line 222, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task5_feedback\evaluate_math.py", line 128, in main
+    records = generate_for_policy(
+        cfg, tokenizer, rows, name, batch_size=args.batch_size, greedy=args.greedy
+    )
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task5_feedback\evaluate_math.py", line 79, in generate_for_policy
+    "problem_index": int(row.get("source_index", row.get("problem_id", len(records)))),
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'svamp:chal-1'
+$ python -m task5_feedback.evaluate_math --dataset transfer
+
+Rows: 100
+Policies: ['sft', 'rlvr', 'rlaif']
+=== generating sft responses ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task5_feedback\evaluate_math.py", line 222, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task5_feedback\evaluate_math.py", line 128, in main
+    records = generate_for_policy(
+        cfg, tokenizer, rows, name, batch_size=args.batch_size, greedy=args.greedy
+    )
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task5_feedback\evaluate_math.py", line 79, in generate_for_policy
+    "problem_index": int(row.get("source_index", row.get("problem_id", len(records)))),
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'svamp:chal-1'

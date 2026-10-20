@@ -1,0 +1,139 @@
+{
+  "description": "Task 5: matched evaluation of the SFT, RLVR and RLAIF policies. The policy family, prompt set, decoding configuration and length cap are identical across conditions; only the feedback source used for training differs.",
+  "dataset": "transfer",
+  "decoding": {
+    "greedy": false,
+    "max_new_tokens": 512,
+    "seed": 6304
+  },
+  "policies": {
+    "sft": {
+      "exact_accuracy": 0.54,
+      "format_compliance": 0.65,
+      "mean_response_tokens": 155.6,
+      "median_response_tokens": 139,
+      "num_problems": 100
+    },
+    "rlvr": {
+      "exact_accuracy": 0.52,
+      "format_compliance": 0.63,
+      "mean_response_tokens": 159.2,
+      "median_response_tokens": 140,
+      "num_problems": 100,
+      "pairwise_vs_sft": {
+        "win": 11,
+        "tie": 78,
+        "loss": 11,
+        "win_rate": 0.5,
+        "judge_tie_rate": 0.78,
+        "num_comparisons": 100
+      }
+    },
+    "rlaif": {
+      "exact_accuracy": 0.51,
+      "format_compliance": 0.62,
+      "mean_response_tokens": 160.22,
+      "median_response_tokens": 140,
+      "num_problems": 100,
+      "pairwise_vs_sft": {
+        "win": 14,
+        "tie": 76,
+        "loss": 10,
+        "win_rate": 0.52,
+        "judge_tie_rate": 0.76,
+        "num_comparisons": 100
+      }
+    }
+  },
+  "verifier_judge_agreement": {
+    "definition": "Over response pairs for the same problem where the exact verifier assigns different rewards, the fraction of pairs the AI pairwise judge prefers the verifier-correct response.",
+    "num_pairs": 16,
+    "agreement": 0.5625,
+    "disagreements": [
+      {
+        "problem_id": "svamp:chal-1",
+        "pair": [
+          "sft",
+          "rlvr"
+        ],
+        "judge_preference": "B",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "First, we need to subtract the discount from the original price of each pack.\n\nOriginal price: $76\nDiscount per pack: $25\n\nPrice after discount = Original price - Discount\nPrice after discount = $76 - $25\nPrice after discount = $51\n\nTherefore, to buy each pack after the discount, you would have to pay **$51**. #### 51"
+      },
+      {
+        "problem_id": "svamp:chal-1",
+        "pair": [
+          "sft",
+          "rlaif"
+        ],
+        "judge_preference": "B",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "First, we need to subtract the discount from the original price of each pack.\n\nOriginal price: $76\nDiscount per pack: $25\n\nPrice after discount = Original price - Discount\nPrice after discount = $76 - $25\nPrice after discount = $51\n\nTherefore, to buy each pack after the discount, you would have to pay **$51**. #### 51"
+      },
+      {
+        "problem_id": "svamp:chal-27",
+        "pair": [
+          "sft",
+          "rlvr"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "To determine how many students participated in the suggestion of new food items, we start by identifying the number of students who added mashed potatoes and those who added bacon. We know that there were 450 students who suggested adding mashed potatoes and 38 students who suggested adding bacon.\n\nThe total number of suggestions is the sum of the students who suggested mashed potatoes and those w"
+      },
+      {
+        "problem_id": "svamp:chal-27",
+        "pair": [
+          "sft",
+          "rlaif"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "To determine how many students participated in the suggestion of new food items, we start by identifying the number of students who added mashed potatoes and those who added bacon. We know that there were 450 students who suggested adding mashed potatoes and 38 students who suggested adding bacon.\n\nThe total number of suggestions is the sum of the students who suggested mashed potatoes and those w"
+      },
+      {
+        "problem_id": "svamp:chal-29",
+        "pair": [
+          "sft",
+          "rlvr"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "To find the total number of bottles of regular soda and diet soda that the grocery store had, we need to add the quantities together:\n\n- Number of regular soda bottles: 49\n- Number of diet soda bottles: 40\n\nNow let's add these two numbers:\n\n\\[ \\text{Total} = \\text{Regular Soda Bottles} + \\text{Diet Soda Bottles} \\]\n\\[ \\text{Total} = 49 + 40 \\]\n\\[ \\text{Total} = 89 \\]\n\nTherefore, the grocery store "
+      },
+      {
+        "problem_id": "svamp:chal-29",
+        "pair": [
+          "sft",
+          "rlaif"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "sft"
+        ],
+        "sft": "To find the total number of bottles of regular soda and diet soda that the grocery store had, we need to add the quantities together:\n\n- Number of regular soda bottles: 49\n- Number of diet soda bottles: 40\n\nNow let's add these two numbers:\n\n\\[ \\text{Total} = \\text{Regular Soda Bottles} + \\text{Diet Soda Bottles} \\]\n\\[ \\text{Total} = 49 + 40 \\]\n\\[ \\text{Total} = 89 \\]\n\nTherefore, the grocery store "
+      },
+      {
+        "problem_id": "svamp:chal-55",
+        "pair": [
+          "rlvr",
+          "rlaif"
+        ],
+        "judge_preference": "TIE",
+        "verifier_correct": [
+          "rlvr"
+        ],
+        "sft": null
+      }
+    ]
+  }
+}

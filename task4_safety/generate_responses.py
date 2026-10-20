@@ -3,9 +3,9 @@ from __future__ import annotations
 import argparse
 import pandas as pd
 
-from common.data import load_yaml, repo_path
+from common.data import load_yaml, repo_path, write_jsonl
 from common.generation import batch_generate
-from common.models import load_policy, load_tokenizer
+from common.models import clear_gpu, load_policy, load_tokenizer
 
 
 def policy_specs(cfg):
@@ -53,19 +53,30 @@ def generate_for_policy(cfg, policy_name: str, batch_size: int = 4):
                 "response": response,
                 "response_tokens": int(n_tok),
             })
+    del model, tokenizer
+    clear_gpu()
     return records
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="configs/feedback.yaml")
+    ap.add_argument("--policies", nargs="*", default=list(policy_specs(load_yaml("configs/feedback.yaml")).keys()))
+    ap.add_argument("--batch-size", type=int, default=4)
     args = ap.parse_args()
     cfg = load_yaml(args.config)
     print("Policies:", list(policy_specs(cfg)))
     print("XSTest rows:", len(load_xstest(cfg)))
-    raise NotImplementedError(
-        "TODO(student): call generate_for_policy for SFT/DPO/PPO/GRPO, save common deterministic responses, and preserve the fixed prompt order."
-    )
+    outdir = repo_path(cfg["results_dir"]) / "task4_safety"
+    outdir.mkdir(parents=True, exist_ok=True)
+
+    for policy_name in args.policies:
+        print(f"=== generating deterministic XSTest responses for {policy_name} ===", flush=True)
+        records = generate_for_policy(cfg, policy_name, batch_size=args.batch_size)
+        path = outdir / f"generated_{policy_name}.jsonl"
+        write_jsonl(path, records)
+        mean_len = sum(r["response_tokens"] for r in records) / max(1, len(records))
+        print(f"wrote {len(records)} responses -> {path} (mean {mean_len:.1f} tokens)", flush=True)
 
 
 if __name__ == "__main__":

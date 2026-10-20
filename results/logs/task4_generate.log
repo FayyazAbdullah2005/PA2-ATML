@@ -1,0 +1,14 @@
+$ python -m task4_safety.generate_responses
+
+Policies: ['sft', 'dpo', 'ppo', 'grpo']
+XSTest rows: 450
+=== generating deterministic XSTest responses for sft ===
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+wrote 450 responses -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task4_safety\generated_sft.jsonl (mean 108.4 tokens)
+=== generating deterministic XSTest responses for dpo ===
+W1011 08:31:18.716000 36888 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+wrote 450 responses -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task4_safety\generated_dpo.jsonl (mean 109.3 tokens)
+=== generating deterministic XSTest responses for ppo ===
+wrote 450 responses -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task4_safety\generated_ppo.jsonl (mean 107.9 tokens)
+=== generating deterministic XSTest responses for grpo ===
+wrote 450 responses -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task4_safety\generated_grpo.jsonl (mean 108.5 tokens)

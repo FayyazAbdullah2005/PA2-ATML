@@ -1,0 +1,110 @@
+{
+  "task1_standard": {
+    "returncode": 0,
+    "seconds": 1085.2,
+    "output": "results/task1_dpo/standard_train_summary.json",
+    "log": "results\\logs\\task1_standard.log"
+  },
+  "task3_standard": {
+    "returncode": 0,
+    "seconds": 458.8,
+    "output": "results/task3_grpo/standard_summary.json",
+    "log": "results\\logs\\task3_standard.log"
+  },
+  "task3_standard_eval": {
+    "returncode": 0,
+    "seconds": 649.1,
+    "output": "results/task3_grpo/standard_heldout_eval.json",
+    "log": "results\\logs\\task3_standard_eval.log"
+  },
+  "task1_eval": {
+    "returncode": 0,
+    "seconds": 2337.2,
+    "output": "results/task1_dpo/standard_eval.json",
+    "log": "results\\logs\\task1_eval.log"
+  },
+  "task1_beta_ablation": {
+    "returncode": 0,
+    "seconds": 3181.1,
+    "output": "results/task1_dpo/beta_ablation.json",
+    "log": "results\\logs\\task1_beta_ablation.log"
+  },
+  "task1_length": {
+    "returncode": 1,
+    "seconds": 1180.6,
+    "output": "results/task1_dpo/length_confounding.json",
+    "log": "results\\logs\\task1_length.log"
+  },
+  "task2_eval": {
+    "returncode": 0,
+    "seconds": 432.0,
+    "output": "results/task2_ppo/standard_heldout_eval.json",
+    "log": "results\\logs\\task2_eval.log"
+  },
+  "task2_clipping": {
+    "returncode": 1,
+    "seconds": 33.4,
+    "output": "results/task2_ppo/clipping_study.json",
+    "log": "results\\logs\\task2_clipping.log"
+  },
+  "task2_kl_ablation": {
+    "returncode": 2,
+    "seconds": 9.9,
+    "output": "results/task2_ppo/kl_ablation.json",
+    "log": "results\\logs\\task2_kl_ablation.log"
+  },
+  "task3_group_size": {
+    "returncode": 0,
+    "seconds": 2.6,
+    "output": "results/task3_grpo/group_size_study.json",
+    "log": "results\\logs\\task3_group_size.log"
+  },
+  "task3_normalization": {
+    "returncode": 1,
+    "seconds": 1541.5,
+    "output": "results/task3_grpo/normalization_study.json",
+    "log": "results\\logs\\task3_normalization.log"
+  },
+  "task4_generate": {
+    "returncode": 0,
+    "seconds": 3085.3,
+    "output": "results/task4_safety/generated_grpo.jsonl",
+    "log": "results\\logs\\task4_generate.log"
+  },
+  "task4_judge": {
+    "returncode": 0,
+    "seconds": 3415.1,
+    "output": "results/task4_safety/judged_grpo.jsonl",
+    "log": "results\\logs\\task4_judge.log"
+  },
+  "task4_audit_sheet": {
+    "returncode": 0,
+    "seconds": 0.9,
+    "output": "results/task4_safety/manual_audit_sheet.csv",
+    "log": "results\\logs\\task4_audit_sheet.log"
+  },
+  "task5_gsm": {
+    "returncode": 0,
+    "seconds": 1046.2,
+    "output": "results/task5_feedback/gsm_eval.json",
+    "log": "results\\logs\\task5_gsm.log"
+  },
+  "task5_perturbations": {
+    "returncode": 0,
+    "seconds": 62.1,
+    "output": "results/task5_feedback/perturbation_study.json",
+    "log": "results\\logs\\task5_perturbations.log"
+  },
+  "task5_transfer": {
+    "returncode": 1,
+    "seconds": 32.9,
+    "output": "results/task5_feedback/transfer_eval.json",
+    "log": "results\\logs\\task5_transfer.log"
+  },
+  "task5_compare": {
+    "returncode": 1,
+    "seconds": 2.5,
+    "output": "results/task5_feedback/feedback_comparison.json",
+    "log": "results\\logs\\task5_compare.log"
+  }
+}

@@ -113,6 +113,44 @@ def response_sequence_logprobs(model, batch: dict):
     return (tok * mask).sum(-1), tok, mask
 
 
+def chunked_response_token_logprobs(model, input_ids, attention_mask, prompt_width, with_grad=False, chunk=128):
+    """Response-token log-probabilities computed by applying the LM head in position chunks.
+
+    `response_token_logprobs` materialises the whole `[batch, seq, |V|]` logit tensor and an
+    fp32 copy of its log-softmax (about 700 MB for a single 768-token sequence with the
+    Qwen vocabulary). Two tasks need those log-probabilities while a policy, a frozen reward
+    model and an 8 GB card are already resident, so they share this version instead: the
+    backbone still runs once, but the head runs on `chunk` positions at a time and the chunk
+    is recomputed during the backward pass rather than stored.
+
+    Numerically identical to the full-sequence computation, just not all at once.
+    """
+
+    inner = model.get_base_model() if hasattr(model, "get_base_model") else model
+    backbone, head = inner.model, inner.lm_head
+    hidden = backbone(
+        input_ids=input_ids,
+        attention_mask=attention_mask,
+        use_cache=False,
+        return_dict=True,
+    ).last_hidden_state
+
+    def gather(head, hidden_chunk, labels):
+        logp = torch.log_softmax(head(hidden_chunk).float(), dim=-1)
+        return torch.gather(logp, -1, labels.unsqueeze(-1)).squeeze(-1)
+
+    hidden = hidden[:, prompt_width - 1 : -1, :]
+    labels = input_ids[:, prompt_width :]
+    pieces = []
+    for i in range(0, hidden.shape[1], chunk):
+        h, lab = hidden[:, i : i + chunk, :], labels[:, i : i + chunk]
+        if with_grad:
+            pieces.append(torch.utils.checkpoint.checkpoint(gather, head, h, lab, use_reentrant=False))
+        else:
+            pieces.append(gather(head, h, lab))
+    return torch.cat(pieces, dim=1)
+
+
 @torch.no_grad()
 def score_reward_pairs(rm_model, rm_tokenizer, prompts, responses, max_length=1024):
     texts = []

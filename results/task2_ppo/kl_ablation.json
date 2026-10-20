@@ -1,0 +1,390 @@
+{
+  "description": "Task 2 Step 3: reward-overoptimisation / KL-pressure study. Each fork restarts from the same supplied PPO midpoint, uses the same prompts in the same order, the same seed per update, the same clip epsilon and the same update budget; only beta_KL changes.",
+  "kl_values": [
+    0.0,
+    0.1,
+    0.2
+  ],
+  "fork_updates": 8,
+  "clip_epsilon_held_fixed": 0.2,
+  "standard_continuation_reference": {
+    "final_update": {
+      "update": 20,
+      "run_name": "standard",
+      "prompt_source_indices": [
+        57729
+      ],
+      "learned_reward_mean": 0.198974609375,
+      "learned_reward_raw_mean": 0.198974609375,
+      "kl_token_mean": 0.002680547535419464,
+      "kl_sequence_sum_mean": 0.04020821303129196,
+      "policy_loss": -0.001338416346698068,
+      "value_loss": 1.507550835609436,
+      "clip_fraction": 0.0,
+      "entropy_token_mean": 0.41960011422634125,
+      "policy_grad_norm": 1.5814684629440308,
+      "value_grad_norm": 147.9701385498047,
+      "advantage_mean": -7.947286384535346e-09,
+      "advantage_std": 0.9999999403953552,
+      "return_mean": -0.18630002439022064,
+      "value_mean": -0.8551689386367798,
+      "response_length_mean": 15.0,
+      "eos_termination_rate": 1.0,
+      "clip_epsilon": 0.2,
+      "kl_beta": 0.1,
+      "update_wall_time_s": 1.991,
+      "wall_time_s": 2006.034,
+      "peak_vram_gb": 6.2302,
+      "critic_steps_skipped": 0,
+      "task_reward_nonfinite": 0,
+      "task_reward_absmax": 0.198974609375,
+      "old_logp_nonfinite": 0,
+      "old_logp_absmax": 1.6149381399154663,
+      "ref_logp_nonfinite": 0,
+      "ref_logp_absmax": 1.6392377614974976,
+      "token_rewards_nonfinite": 0,
+      "token_rewards_absmax": 0.1989728808403015,
+      "old_values_raw_nonfinite": 0,
+      "old_values_raw_absmax": 2.883519172668457,
+      "advantages_nonfinite": 0,
+      "advantages_absmax": 3.042611598968506,
+      "returns_nonfinite": 0,
+      "returns_absmax": 0.33674806356430054,
+      "new_values_nonfinite": 0,
+      "new_values_absmax": 2.8037257194519043,
+      "new_logp_nonfinite": 0,
+      "new_logp_absmax": 1.6145415306091309,
+      "policy_loss_nonfinite": 0,
+      "policy_loss_absmax": 0.00025086800451390445
+    }
+  },
+  "results": [
+    {
+      "condition": "kl_0",
+      "kl_beta": 0.0,
+      "adapter": "outputs/task2_ppo/kl_0",
+      "fork_updates": 8,
+      "heldout": {
+        "condition": "kl_0",
+        "adapter": "outputs/task2_ppo/kl_0",
+        "num_prompts": 20,
+        "eval_max_response_length": 768,
+        "reward_model_mean": 1.99359130859375,
+        "reward_model_mean_penalized": 1.79359130859375,
+        "kl_token_mean": -0.00012211050753876406,
+        "entropy_token_mean": 0.7088605381548405,
+        "response_length_mean": 381.5,
+        "response_length_max": 768,
+        "eos_termination_rate": 0.8,
+        "truncation_rate": 0.2,
+        "samples_file": "results\\task2_ppo\\samples\\kl_0_generations.jsonl"
+      },
+      "trajectory": {
+        "learned_reward_mean": {
+          "first_third": 0.77197265625,
+          "last_third": 0.719970703125,
+          "delta": -0.052001953125
+        },
+        "kl_token_mean": {
+          "first_third": 6.377364479703829e-05,
+          "last_third": 0.00024355568166356534,
+          "delta": 0.00017978203686652705
+        },
+        "entropy_token_mean": {
+          "first_third": 0.9557849317789078,
+          "last_third": 0.5850926414132118,
+          "delta": -0.37069229036569595
+        },
+        "response_length_mean": {
+          "first_third": 445.0,
+          "last_third": 224.5,
+          "delta": -220.5
+        },
+        "clip_fraction": {
+          "first_third": 0.0,
+          "last_third": 0.0,
+          "delta": 0.0
+        },
+        "policy_loss": {
+          "first_third": -1.67612852237653e-05,
+          "last_third": 0.00028001677401334746,
+          "delta": 0.00029677805923711276
+        },
+        "value_loss": {
+          "first_third": 4.8088507652282715,
+          "last_third": 5.895106673240662,
+          "delta": 1.0862559080123901
+        }
+      },
+      "final_update": {
+        "update": 8,
+        "run_name": "kl_0",
+        "prompt_source_indices": [
+          29307
+        ],
+        "learned_reward_mean": 1.23046875,
+        "learned_reward_raw_mean": 1.23046875,
+        "kl_token_mean": 0.0001315983827225864,
+        "kl_sequence_sum_mean": 0.036057956516742706,
+        "policy_loss": 0.00045432487968355417,
+        "value_loss": 4.645294666290283,
+        "clip_fraction": 0.0,
+        "entropy_token_mean": 0.4185076206922531,
+        "policy_grad_norm": 0.21269912272691727,
+        "value_grad_norm": 56.34479522705078,
+        "advantage_mean": -1.0441689290985323e-08,
+        "advantage_std": 1.0,
+        "return_mean": -1.8382779359817505,
+        "value_mean": -2.031501293182373,
+        "response_length_mean": 274.0,
+        "eos_termination_rate": 1.0,
+        "clip_epsilon": 0.2,
+        "kl_beta": 0.0,
+        "update_wall_time_s": 13.712,
+        "wall_time_s": 128.748,
+        "peak_vram_gb": 6.2254,
+        "critic_steps_skipped": 0,
+        "task_reward_nonfinite": 0,
+        "task_reward_absmax": 1.23046875,
+        "old_logp_nonfinite": 0,
+        "old_logp_absmax": 3.485290288925171,
+        "ref_logp_nonfinite": 0,
+        "ref_logp_absmax": 3.4909756183624268,
+        "token_rewards_nonfinite": 0,
+        "token_rewards_absmax": 1.23046875,
+        "old_values_raw_nonfinite": 0,
+        "old_values_raw_absmax": 9.813961029052734,
+        "advantages_nonfinite": 0,
+        "advantages_absmax": 7.501659393310547,
+        "returns_nonfinite": 0,
+        "returns_absmax": 3.8127410411834717,
+        "new_values_nonfinite": 0,
+        "new_values_absmax": 9.673416137695312,
+        "new_logp_nonfinite": 0,
+        "new_logp_absmax": 3.487731695175171,
+        "policy_loss_nonfinite": 0,
+        "policy_loss_absmax": 0.00037011265521869063
+      },
+      "wall_time_s": 130.228,
+      "peak_vram_gb": 6.2254
+    },
+    {
+      "condition": "kl_0.1",
+      "kl_beta": 0.1,
+      "adapter": "outputs/task2_ppo/kl_0.1",
+      "fork_updates": 8,
+      "heldout": {
+        "condition": "kl_0.1",
+        "adapter": "outputs/task2_ppo/kl_0.1",
+        "num_prompts": 20,
+        "eval_max_response_length": 768,
+        "reward_model_mean": 1.951666259765625,
+        "reward_model_mean_penalized": 1.801666259765625,
+        "kl_token_mean": -0.00011473649938125164,
+        "entropy_token_mean": 0.7850057892501354,
+        "response_length_mean": 355.6,
+        "response_length_max": 768,
+        "eos_termination_rate": 0.85,
+        "truncation_rate": 0.15,
+        "samples_file": "results\\task2_ppo\\samples\\kl_0.1_generations.jsonl"
+      },
+      "trajectory": {
+        "learned_reward_mean": {
+          "first_third": 1.2587890625,
+          "last_third": 0.5255126953125,
+          "delta": -0.7332763671875
+        },
+        "kl_token_mean": {
+          "first_third": -0.00020568037871271372,
+          "last_third": -0.0003934404667234048,
+          "delta": -0.0001877600880106911
+        },
+        "entropy_token_mean": {
+          "first_third": 0.8637148886919022,
+          "last_third": 0.6184163764119148,
+          "delta": -0.24529851227998734
+        },
+        "response_length_mean": {
+          "first_third": 350.5,
+          "last_third": 286.5,
+          "delta": -64.0
+        },
+        "clip_fraction": {
+          "first_third": 0.0,
+          "last_third": 0.0,
+          "delta": 0.0
+        },
+        "policy_loss": {
+          "first_third": -0.00043373861990403384,
+          "last_third": 7.112843377399258e-05,
+          "delta": 0.0005048670536780264
+        },
+        "value_loss": {
+          "first_third": 5.053062438964844,
+          "last_third": 6.355139374732971,
+          "delta": 1.3020769357681274
+        }
+      },
+      "final_update": {
+        "update": 8,
+        "run_name": "kl_0.1",
+        "prompt_source_indices": [
+          29307
+        ],
+        "learned_reward_mean": 1.23046875,
+        "learned_reward_raw_mean": 1.23046875,
+        "kl_token_mean": 0.00021450317581184208,
+        "kl_sequence_sum_mean": 0.05877387151122093,
+        "policy_loss": 0.00021930593356955796,
+        "value_loss": 4.8440752029418945,
+        "clip_fraction": 0.0,
+        "entropy_token_mean": 0.4183589965105057,
+        "policy_grad_norm": 0.2085651531815529,
+        "value_grad_norm": 56.301631927490234,
+        "advantage_mean": 6.961126342019952e-09,
+        "advantage_std": 1.0,
+        "return_mean": -1.5437630414962769,
+        "value_mean": -1.7138276100158691,
+        "response_length_mean": 274.0,
+        "eos_termination_rate": 1.0,
+        "clip_epsilon": 0.2,
+        "kl_beta": 0.1,
+        "update_wall_time_s": 12.581,
+        "wall_time_s": 103.08,
+        "peak_vram_gb": 6.2268,
+        "critic_steps_skipped": 0,
+        "task_reward_nonfinite": 0,
+        "task_reward_absmax": 1.23046875,
+        "old_logp_nonfinite": 0,
+        "old_logp_absmax": 3.4940009117126465,
+        "ref_logp_nonfinite": 0,
+        "ref_logp_absmax": 3.4909756183624268,
+        "token_rewards_nonfinite": 0,
+        "token_rewards_absmax": 1.230465292930603,
+        "old_values_raw_nonfinite": 0,
+        "old_values_raw_absmax": 9.761842727661133,
+        "advantages_nonfinite": 0,
+        "advantages_absmax": 7.662478923797607,
+        "returns_nonfinite": 0,
+        "returns_absmax": 3.5805306434631348,
+        "new_values_nonfinite": 0,
+        "new_values_absmax": 9.617448806762695,
+        "new_logp_nonfinite": 0,
+        "new_logp_absmax": 3.4846856594085693,
+        "policy_loss_nonfinite": 0,
+        "policy_loss_absmax": 0.00015443607117049396
+      },
+      "wall_time_s": 104.534,
+      "peak_vram_gb": 6.2268
+    },
+    {
+      "condition": "kl_0.2",
+      "kl_beta": 0.2,
+      "adapter": "outputs/task2_ppo/kl_0.2",
+      "fork_updates": 8,
+      "heldout": {
+        "condition": "kl_0.2",
+        "adapter": "outputs/task2_ppo/kl_0.2",
+        "num_prompts": 20,
+        "eval_max_response_length": 768,
+        "reward_model_mean": 1.998248291015625,
+        "reward_model_mean_penalized": 1.948248291015625,
+        "kl_token_mean": -0.00010140062008758832,
+        "entropy_token_mean": 0.7388091076165437,
+        "response_length_mean": 355.95,
+        "response_length_max": 768,
+        "eos_termination_rate": 0.95,
+        "truncation_rate": 0.05,
+        "samples_file": "results\\task2_ppo\\samples\\kl_0.2_generations.jsonl"
+      },
+      "trajectory": {
+        "learned_reward_mean": {
+          "first_third": 1.2587890625,
+          "last_third": 0.5255126953125,
+          "delta": -0.7332763671875
+        },
+        "kl_token_mean": {
+          "first_third": 4.61097079096362e-05,
+          "last_third": -0.000449356171884574,
+          "delta": -0.0004954658797942102
+        },
+        "entropy_token_mean": {
+          "first_third": 0.86384616792202,
+          "last_third": 0.6184787079691887,
+          "delta": -0.24536745995283127
+        },
+        "response_length_mean": {
+          "first_third": 350.5,
+          "last_third": 286.5,
+          "delta": -64.0
+        },
+        "clip_fraction": {
+          "first_third": 0.0,
+          "last_third": 0.0,
+          "delta": 0.0
+        },
+        "policy_loss": {
+          "first_third": -0.00011081900629505981,
+          "last_third": 7.497444312321022e-05,
+          "delta": 0.00018579344941827003
+        },
+        "value_loss": {
+          "first_third": 5.0540688037872314,
+          "last_third": 6.324578762054443,
+          "delta": 1.270509958267212
+        }
+      },
+      "final_update": {
+        "update": 8,
+        "run_name": "kl_0.2",
+        "prompt_source_indices": [
+          29307
+        ],
+        "learned_reward_mean": 1.23046875,
+        "learned_reward_raw_mean": 1.23046875,
+        "kl_token_mean": -0.00021575801656581461,
+        "kl_sequence_sum_mean": -0.059117697179317474,
+        "policy_loss": 0.00018019136768998578,
+        "value_loss": 4.800510406494141,
+        "clip_fraction": 0.0,
+        "entropy_token_mean": 0.4183376282453537,
+        "policy_grad_norm": 0.20979221910238266,
+        "value_grad_norm": 56.117610931396484,
+        "advantage_mean": -3.480563171009976e-09,
+        "advantage_std": 1.0,
+        "return_mean": -1.6416585445404053,
+        "value_mean": -1.8199843168258667,
+        "response_length_mean": 274.0,
+        "eos_termination_rate": 1.0,
+        "clip_epsilon": 0.2,
+        "kl_beta": 0.2,
+        "update_wall_time_s": 12.592,
+        "wall_time_s": 101.786,
+        "peak_vram_gb": 6.2229,
+        "critic_steps_skipped": 0,
+        "task_reward_nonfinite": 0,
+        "task_reward_absmax": 1.23046875,
+        "old_logp_nonfinite": 0,
+        "old_logp_absmax": 3.485302448272705,
+        "ref_logp_nonfinite": 0,
+        "ref_logp_absmax": 3.4909756183624268,
+        "token_rewards_nonfinite": 0,
+        "token_rewards_absmax": 1.2304641008377075,
+        "old_values_raw_nonfinite": 0,
+        "old_values_raw_absmax": 9.908945083618164,
+        "advantages_nonfinite": 0,
+        "advantages_absmax": 7.60544490814209,
+        "returns_nonfinite": 0,
+        "returns_absmax": 3.6863880157470703,
+        "new_values_nonfinite": 0,
+        "new_values_absmax": 9.789054870605469,
+        "new_logp_nonfinite": 0,
+        "new_logp_absmax": 3.484724521636963,
+        "policy_loss_nonfinite": 0,
+        "policy_loss_absmax": 0.00011223946057725698
+      },
+      "wall_time_s": 103.269,
+      "peak_vram_gb": 6.2229
+    }
+  ]
+}

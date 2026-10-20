@@ -1,0 +1,74 @@
+$ python -m task3_grpo.compare_normalization --eval-limit 40
+
+=== loss_type=grpo: 8-update continuation fork ===
+W1011 07:28:16.404000 43556 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[grpo] update 1 reward=1.887 kl=0.0001 group_std=0.2633 uninf=0.00 loss=-0.2481 len=355.8 t=36.0s
+[grpo] update 2 reward=3.021 kl=0.0000 group_std=0.3030 uninf=0.00 loss=-0.0003 len=306.8 t=57.4s
+[grpo] update 3 reward=0.762 kl=0.0000 group_std=1.8060 uninf=0.00 loss=-0.0007 len=180.5 t=75.6s
+[grpo] update 4 reward=1.683 kl=0.0004 group_std=0.2530 uninf=0.00 loss=0.0001 len=105.5 t=92.8s
+[grpo] update 5 reward=0.828 kl=0.0000 group_std=0.5320 uninf=0.00 loss=0.0000 len=0.0 t=119.4s
+[grpo] update 6 reward=2.709 kl=-0.0001 group_std=0.5938 uninf=0.00 loss=-0.0000 len=221.5 t=131.3s
+[grpo] update 7 reward=-1.885 kl=-0.0007 group_std=0.5119 uninf=0.00 loss=0.0010 len=59.5 t=136.5s
+[grpo] update 8 reward=1.051 kl=-0.0001 group_std=0.2699 uninf=0.00 loss=0.2108 len=192.2 t=162.7s
+C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task3_grpo\evaluate.py:89: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  group_stds.append(float(torch.tensor(chunk, dtype=torch.float32).std(unbiased=False).item()))
+saved adapter -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\outputs\task3_grpo\grpo
+[grpo] n=40 reward=1.061 kl=-0.0004 len=265.4 informative=0.97
+=== loss_type=dr_grpo: 8-update continuation fork ===
+[dr_grpo] update 1 reward=1.887 kl=0.0001 group_std=0.2633 uninf=0.00 loss=-0.2211 len=355.8 t=26.4s
+[dr_grpo] update 2 reward=2.923 kl=0.0001 group_std=0.4245 uninf=0.00 loss=-0.2088 len=355.2 t=52.1s
+[dr_grpo] update 3 reward=0.831 kl=-0.0002 group_std=1.5861 uninf=0.00 loss=-0.2217 len=166.8 t=67.9s
+[dr_grpo] update 4 reward=1.624 kl=0.0006 group_std=0.2832 uninf=0.00 loss=-0.0487 len=107.2 t=85.0s
+[dr_grpo] update 5 reward=0.761 kl=0.0000 group_std=0.8286 uninf=0.00 loss=0.0000 len=0.0 t=111.4s
+[dr_grpo] update 6 reward=2.418 kl=-0.0003 group_std=0.4296 uninf=0.00 loss=-0.0800 len=238.8 t=127.5s
+[dr_grpo] update 7 reward=-1.885 kl=0.0001 group_std=0.5119 uninf=0.00 loss=-0.0119 len=59.5 t=132.7s
+[dr_grpo] update 8 reward=0.967 kl=-0.0001 group_std=0.1115 uninf=0.00 loss=-0.0968 len=296.5 t=159.3s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task3_grpo\compare_normalization.py", line 117, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task3_grpo\compare_normalization.py", line 99, in main
+    key: rows[1][key] - rows[0][key]
+         ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'dict' and 'dict'
+saved adapter -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\outputs\task3_grpo\dr_grpo
+[dr_grpo] n=40 reward=1.101 kl=-0.0016 len=265.2 informative=0.97
+$ python -m task3_grpo.compare_normalization --eval-limit 40
+
+=== loss_type=grpo: 8-update continuation fork ===
+W1011 07:54:56.183000 43112 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[grpo] update 1 reward=1.887 kl=0.0001 group_std=0.2633 uninf=0.00 loss=-0.2481 len=355.8 t=37.8s
+[grpo] update 2 reward=3.021 kl=0.0000 group_std=0.3030 uninf=0.00 loss=-0.0003 len=306.8 t=59.0s
+[grpo] update 3 reward=0.762 kl=0.0000 group_std=1.8060 uninf=0.00 loss=-0.0007 len=180.5 t=76.7s
+[grpo] update 4 reward=1.683 kl=0.0004 group_std=0.2530 uninf=0.00 loss=0.0001 len=105.5 t=93.2s
+[grpo] update 5 reward=0.828 kl=0.0000 group_std=0.5320 uninf=0.00 loss=0.0000 len=0.0 t=118.6s
+[grpo] update 6 reward=2.709 kl=-0.0001 group_std=0.5938 uninf=0.00 loss=-0.0000 len=221.5 t=130.5s
+[grpo] update 7 reward=-1.885 kl=-0.0007 group_std=0.5119 uninf=0.00 loss=0.0010 len=59.5 t=135.6s
+[grpo] update 8 reward=1.051 kl=-0.0001 group_std=0.2699 uninf=0.00 loss=0.2108 len=192.2 t=161.3s
+C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task3_grpo\evaluate.py:89: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  group_stds.append(float(torch.tensor(chunk, dtype=torch.float32).std(unbiased=False).item()))
+saved adapter -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\outputs\task3_grpo\grpo
+[grpo] n=40 reward=1.061 kl=-0.0004 len=265.4 informative=0.97
+=== loss_type=dr_grpo: 8-update continuation fork ===
+[dr_grpo] update 1 reward=1.887 kl=0.0001 group_std=0.2633 uninf=0.00 loss=-0.2211 len=355.8 t=26.2s
+[dr_grpo] update 2 reward=2.923 kl=0.0001 group_std=0.4245 uninf=0.00 loss=-0.2088 len=355.2 t=52.0s
+[dr_grpo] update 3 reward=0.831 kl=-0.0002 group_std=1.5861 uninf=0.00 loss=-0.2217 len=166.8 t=67.4s
+[dr_grpo] update 4 reward=1.624 kl=0.0006 group_std=0.2832 uninf=0.00 loss=-0.0487 len=107.2 t=84.4s
+[dr_grpo] update 5 reward=0.761 kl=0.0000 group_std=0.8286 uninf=0.00 loss=0.0000 len=0.0 t=110.7s
+[dr_grpo] update 6 reward=2.418 kl=-0.0003 group_std=0.4296 uninf=0.00 loss=-0.0800 len=238.8 t=126.9s
+[dr_grpo] update 7 reward=-1.885 kl=0.0001 group_std=0.5119 uninf=0.00 loss=-0.0119 len=59.5 t=132.0s
+[dr_grpo] update 8 reward=0.967 kl=-0.0001 group_std=0.1115 uninf=0.00 loss=-0.0968 len=296.5 t=158.7s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task3_grpo\compare_normalization.py", line 117, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task3_grpo\compare_normalization.py", line 99, in main
+    key: rows[1][key] - rows[0][key]
+         ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'dict' and 'dict'
+saved adapter -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\outputs\task3_grpo\dr_grpo
+[dr_grpo] n=40 reward=1.101 kl=-0.0016 len=265.2 informative=0.97

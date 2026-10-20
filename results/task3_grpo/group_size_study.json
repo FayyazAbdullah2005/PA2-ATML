@@ -1,0 +1,141 @@
+{
+  "description": "Task 3 Step 2: group-size study at equal total generation budget. The released cache stores 8 cached completions per prompt; those 8 completions are partitioned into disjoint K-groups (8/K groups per prompt), so every K condition consumes exactly the same prompts and the same rewarded completions and only the number of within-prompt comparisons changes. No policy training is involved.",
+  "prompt_difficulty_rule": "Prompt difficulty is defined once as the cached reward standard deviation of that prompt's 8 completions; prompts at or below the median spread are 'low_spread', the rest 'high_spread'.",
+  "cached_prompts": 24,
+  "group_sizes": [
+    2,
+    4,
+    8
+  ],
+  "results": {
+    "2": {
+      "overall": {
+        "k": 2,
+        "num_groups": 96,
+        "completions_used": 192,
+        "informative_group_fraction": 0.9375,
+        "uninformative_group_fraction": 0.0625,
+        "within_group_reward_std_mean": 0.3845672607421875,
+        "within_group_reward_std_median": 0.244384765625,
+        "relative_signal_spread": 1.875,
+        "relative_signal_spread_std_over_groups": 0.4841229182759271,
+        "mean_advantage_squared": 0.9375,
+        "relative_signal_variance": 1.875
+      },
+      "by_prompt_difficulty": {
+        "low_spread": {
+          "k": 2,
+          "num_groups": 48,
+          "completions_used": 96,
+          "informative_group_fraction": 0.875,
+          "uninformative_group_fraction": 0.125,
+          "within_group_reward_std_mean": 0.1905517578125,
+          "within_group_reward_std_median": 0.13671875,
+          "relative_signal_spread": 1.75,
+          "relative_signal_spread_std_over_groups": 0.6614378277661477,
+          "mean_advantage_squared": 0.875,
+          "relative_signal_variance": 1.75
+        },
+        "high_spread": {
+          "k": 2,
+          "num_groups": 48,
+          "completions_used": 96,
+          "informative_group_fraction": 1.0,
+          "uninformative_group_fraction": 0.0,
+          "within_group_reward_std_mean": 0.578582763671875,
+          "within_group_reward_std_median": 0.435546875,
+          "relative_signal_spread": 2.0,
+          "relative_signal_spread_std_over_groups": 0.0,
+          "mean_advantage_squared": 1.0,
+          "relative_signal_variance": 2.0
+        }
+      }
+    },
+    "4": {
+      "overall": {
+        "k": 4,
+        "num_groups": 48,
+        "completions_used": 192,
+        "informative_group_fraction": 0.9583333333333334,
+        "uninformative_group_fraction": 0.04166666666666663,
+        "within_group_reward_std_mean": 0.5410043663966159,
+        "within_group_reward_std_median": 0.47366607189178467,
+        "relative_signal_spread": 2.4440848853376234,
+        "relative_signal_spread_std_over_groups": 0.5360772451807393,
+        "mean_advantage_squared": 0.958333338300387,
+        "relative_signal_variance": 2.4440848853376234
+      },
+      "by_prompt_difficulty": {
+        "low_spread": {
+          "k": 4,
+          "num_groups": 24,
+          "completions_used": 96,
+          "informative_group_fraction": 0.9166666666666666,
+          "uninformative_group_fraction": 0.08333333333333337,
+          "within_group_reward_std_mean": 0.27051598982264596,
+          "within_group_reward_std_median": 0.2835480719804764,
+          "relative_signal_spread": 2.3429980111173103,
+          "relative_signal_spread_std_over_groups": 0.7247931598829358,
+          "mean_advantage_squared": 0.9166666766007742,
+          "relative_signal_variance": 2.3429980111173103
+        },
+        "high_spread": {
+          "k": 4,
+          "num_groups": 24,
+          "completions_used": 96,
+          "informative_group_fraction": 1.0,
+          "uninformative_group_fraction": 0.0,
+          "within_group_reward_std_mean": 0.8114927429705858,
+          "within_group_reward_std_median": 0.6842116713523865,
+          "relative_signal_spread": 2.545171759557936,
+          "relative_signal_spread_std_over_groups": 0.1702803239038003,
+          "mean_advantage_squared": 1.0,
+          "relative_signal_variance": 2.545171759557936
+        }
+      }
+    },
+    "8": {
+      "overall": {
+        "k": 8,
+        "num_groups": 24,
+        "completions_used": 192,
+        "informative_group_fraction": 0.9583333333333334,
+        "uninformative_group_fraction": 0.04166666666666663,
+        "within_group_reward_std_mean": 0.619054414331913,
+        "within_group_reward_std_median": 0.4710747301578522,
+        "relative_signal_spread": 2.91642575025978,
+        "relative_signal_spread_std_over_groups": 0.7041512477173463,
+        "mean_advantage_squared": 0.9583333233992258,
+        "relative_signal_variance": 2.91642575025978
+      },
+      "by_prompt_difficulty": {
+        "low_spread": {
+          "k": 8,
+          "num_groups": 12,
+          "completions_used": 96,
+          "informative_group_fraction": 0.9166666666666666,
+          "uninformative_group_fraction": 0.08333333333333337,
+          "within_group_reward_std_mean": 0.30627259115378064,
+          "within_group_reward_std_median": 0.33952508866786957,
+          "relative_signal_spread": 2.7997143042168937,
+          "relative_signal_spread_std_over_groups": 0.9375879390481223,
+          "mean_advantage_squared": 0.9166666666666666,
+          "relative_signal_variance": 2.7997143042168937
+        },
+        "high_spread": {
+          "k": 8,
+          "num_groups": 12,
+          "completions_used": 96,
+          "informative_group_fraction": 1.0,
+          "uninformative_group_fraction": 0.0,
+          "within_group_reward_std_mean": 0.9318362375100454,
+          "within_group_reward_std_median": 0.7909417152404785,
+          "relative_signal_spread": 3.033137196302666,
+          "relative_signal_spread_std_over_groups": 0.2921364280613468,
+          "mean_advantage_squared": 0.999999980131785,
+          "relative_signal_variance": 3.033137196302666
+        }
+      }
+    }
+  }
+}

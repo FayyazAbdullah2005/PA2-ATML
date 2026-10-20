@@ -1,0 +1,24 @@
+$ python -m task3_grpo.continue_train --run-name standard
+
+W1011 03:36:19.681000 35760 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[standard] update 1 reward=1.887 kl=0.0001 group_std=0.2633 uninf=0.00 loss=-0.2481 len=355.8 t=34.7s
+[standard] update 2 reward=3.021 kl=0.0000 group_std=0.3030 uninf=0.00 loss=-0.0003 len=306.8 t=57.8s
+[standard] update 3 reward=0.762 kl=0.0000 group_std=1.8060 uninf=0.00 loss=-0.0007 len=180.5 t=77.0s
+[standard] update 4 reward=1.683 kl=0.0004 group_std=0.2530 uninf=0.00 loss=0.0001 len=105.5 t=95.7s
+[standard] update 5 reward=0.828 kl=0.0000 group_std=0.5320 uninf=0.00 loss=0.0000 len=0.0 t=123.8s
+[standard] update 6 reward=2.709 kl=-0.0001 group_std=0.5938 uninf=0.00 loss=-0.0000 len=221.5 t=137.4s
+[standard] update 7 reward=-1.885 kl=-0.0007 group_std=0.5119 uninf=0.00 loss=0.0010 len=59.5 t=142.9s
+[standard] update 8 reward=1.051 kl=-0.0001 group_std=0.2699 uninf=0.00 loss=0.2108 len=192.2 t=170.2s
+[standard] update 9 reward=2.124 kl=0.0002 group_std=0.3224 uninf=0.00 loss=0.0002 len=159.5 t=183.9s
+[standard] update 10 reward=2.224 kl=0.0004 group_std=0.2206 uninf=0.00 loss=-0.0000 len=107.0 t=192.3s
+[standard] update 11 reward=2.372 kl=-0.0000 group_std=0.3022 uninf=0.00 loss=-0.0000 len=248.0 t=208.9s
+[standard] update 12 reward=2.673 kl=-0.0001 group_std=0.1324 uninf=0.00 loss=0.0000 len=358.8 t=232.3s
+[standard] update 13 reward=2.220 kl=0.0000 group_std=0.2137 uninf=0.00 loss=0.0000 len=0.0 t=260.7s
+[standard] update 14 reward=2.570 kl=0.0001 group_std=0.2657 uninf=0.00 loss=-0.3235 len=302.2 t=288.5s
+[standard] update 15 reward=0.482 kl=0.0000 group_std=0.7347 uninf=0.00 loss=0.0000 len=0.0 t=316.5s
+[standard] update 16 reward=-3.509 kl=0.0001 group_std=0.8606 uninf=0.00 loss=0.4231 len=224.8 t=346.1s
+[standard] update 17 reward=1.213 kl=0.0000 group_std=0.8950 uninf=0.00 loss=0.0000 len=0.0 t=379.3s
+[standard] update 18 reward=2.075 kl=0.0004 group_std=0.3140 uninf=0.00 loss=-0.0001 len=162.5 t=395.2s
+[standard] update 19 reward=-4.297 kl=-0.0003 group_std=0.0000 uninf=1.00 loss=0.0000 len=104.5 t=425.7s
+[standard] update 20 reward=0.213 kl=-0.0007 group_std=0.1919 uninf=0.00 loss=-0.0001 len=17.2 t=427.6s
+saved adapter -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\outputs\task3_grpo\standard

@@ -1,0 +1,102 @@
+$ python -m task1_dpo.train --run-name standard
+
+W1011 03:18:17.578000 33652 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+dropped 54 rows whose prompt does not fit max_length=768
+[standard] step 1 loss=0.6931 preference_accuracy=0.0000 implied_reward_margin=0.0000 grad_norm=1.934 t=24.1s
+[standard] step 2 loss=0.6979 preference_accuracy=0.0000 implied_reward_margin=-0.0094 grad_norm=1.806 t=37.1s
+[standard] step 3 loss=0.6910 preference_accuracy=1.0000 implied_reward_margin=0.0042 grad_norm=1.855 t=50.3s
+[standard] step 4 loss=0.6860 preference_accuracy=0.5000 implied_reward_margin=0.0143 grad_norm=1.909 t=63.7s
+[standard] step 5 loss=0.6922 preference_accuracy=0.5000 implied_reward_margin=0.0018 grad_norm=1.959 t=75.2s
+[standard] step 6 loss=0.6898 preference_accuracy=0.5000 implied_reward_margin=0.0067 grad_norm=1.887 t=88.6s
+[standard] step 7 loss=0.6864 preference_accuracy=1.0000 implied_reward_margin=0.0134 grad_norm=1.973 t=101.7s
+[standard] step 8 loss=0.6879 preference_accuracy=0.5000 implied_reward_margin=0.0105 grad_norm=2.545 t=115.6s
+[standard] step 9 loss=0.6993 preference_accuracy=0.5000 implied_reward_margin=-0.0123 grad_norm=2.030 t=130.5s
+[standard] step 10 loss=0.6816 preference_accuracy=0.5000 implied_reward_margin=0.0235 grad_norm=2.104 t=141.0s
+[standard] step 11 loss=0.6896 preference_accuracy=0.5000 implied_reward_margin=0.0072 grad_norm=1.942 t=152.2s
+[standard] step 12 loss=0.6981 preference_accuracy=0.5000 implied_reward_margin=-0.0096 grad_norm=2.033 t=164.1s
+[standard] step 13 loss=0.6888 preference_accuracy=0.5000 implied_reward_margin=0.0088 grad_norm=2.072 t=176.5s
+[standard] step 14 loss=0.6911 preference_accuracy=0.5000 implied_reward_margin=0.0041 grad_norm=1.960 t=188.7s
+[standard] step 15 loss=0.6938 preference_accuracy=0.5000 implied_reward_margin=-0.0014 grad_norm=1.642 t=198.5s
+[standard] step 16 loss=0.6621 preference_accuracy=1.0000 implied_reward_margin=0.0631 grad_norm=2.056 t=211.5s
+[standard] step 17 loss=0.6747 preference_accuracy=1.0000 implied_reward_margin=0.0376 grad_norm=1.971 t=224.6s
+[standard] step 18 loss=0.6848 preference_accuracy=1.0000 implied_reward_margin=0.0168 grad_norm=1.949 t=237.9s
+[standard] step 19 loss=0.6874 preference_accuracy=0.5000 implied_reward_margin=0.0121 grad_norm=1.851 t=248.1s
+[standard] step 20 loss=0.6683 preference_accuracy=1.0000 implied_reward_margin=0.0504 grad_norm=2.083 t=259.7s
+[standard] step 21 loss=0.6644 preference_accuracy=1.0000 implied_reward_margin=0.0583 grad_norm=1.999 t=270.4s
+[standard] step 22 loss=0.7051 preference_accuracy=0.5000 implied_reward_margin=-0.0236 grad_norm=2.149 t=283.5s
+[standard] step 23 loss=0.7150 preference_accuracy=0.5000 implied_reward_margin=-0.0415 grad_norm=2.340 t=295.4s
+[standard] step 24 loss=0.7039 preference_accuracy=0.0000 implied_reward_margin=-0.0213 grad_norm=2.019 t=308.3s
+[standard] step 25 loss=0.7141 preference_accuracy=0.5000 implied_reward_margin=-0.0398 grad_norm=2.005 t=319.8s
+[standard] step 26 loss=0.6879 preference_accuracy=1.0000 implied_reward_margin=0.0105 grad_norm=2.144 t=329.6s
+[standard] step 27 loss=0.6776 preference_accuracy=1.0000 implied_reward_margin=0.0314 grad_norm=1.582 t=338.0s
+[standard] step 28 loss=0.6573 preference_accuracy=1.0000 implied_reward_margin=0.0732 grad_norm=2.208 t=348.4s
+[standard] step 29 loss=0.6709 preference_accuracy=1.0000 implied_reward_margin=0.0450 grad_norm=2.145 t=359.7s
+[standard] step 30 loss=0.7145 preference_accuracy=0.0000 implied_reward_margin=-0.0423 grad_norm=2.485 t=374.7s
+[standard] step 31 loss=0.7334 preference_accuracy=0.0000 implied_reward_margin=-0.0788 grad_norm=2.345 t=387.1s
+[standard] step 32 loss=0.6951 preference_accuracy=0.5000 implied_reward_margin=-0.0038 grad_norm=2.575 t=398.1s
+[standard] step 33 loss=0.6646 preference_accuracy=1.0000 implied_reward_margin=0.0582 grad_norm=1.985 t=406.8s
+[standard] step 34 loss=0.6845 preference_accuracy=0.5000 implied_reward_margin=0.0183 grad_norm=1.773 t=419.8s
+[standard] step 35 loss=0.7307 preference_accuracy=0.5000 implied_reward_margin=-0.0724 grad_norm=2.228 t=430.9s
+[standard] step 36 loss=0.6838 preference_accuracy=1.0000 implied_reward_margin=0.0188 grad_norm=2.048 t=442.6s
+[standard] step 37 loss=0.6823 preference_accuracy=0.5000 implied_reward_margin=0.0219 grad_norm=1.980 t=454.2s
+[standard] step 38 loss=0.6949 preference_accuracy=0.5000 implied_reward_margin=-0.0030 grad_norm=2.273 t=467.1s
+[standard] step 39 loss=0.6433 preference_accuracy=1.0000 implied_reward_margin=0.1034 grad_norm=2.234 t=480.3s
+[standard] step 40 loss=0.6592 preference_accuracy=1.0000 implied_reward_margin=0.0696 grad_norm=2.032 t=490.7s
+[standard] step 41 loss=0.6788 preference_accuracy=0.5000 implied_reward_margin=0.0293 grad_norm=2.062 t=500.9s
+[standard] step 42 loss=0.6754 preference_accuracy=0.5000 implied_reward_margin=0.0373 grad_norm=2.133 t=513.1s
+[standard] step 43 loss=0.6534 preference_accuracy=1.0000 implied_reward_margin=0.0826 grad_norm=2.281 t=523.0s
+[standard] step 44 loss=0.6928 preference_accuracy=0.5000 implied_reward_margin=0.0007 grad_norm=2.036 t=534.6s
+[standard] step 45 loss=0.6757 preference_accuracy=0.5000 implied_reward_margin=0.0355 grad_norm=1.983 t=545.5s
+[standard] step 46 loss=0.7013 preference_accuracy=0.0000 implied_reward_margin=-0.0163 grad_norm=2.019 t=557.2s
+[standard] step 47 loss=0.6292 preference_accuracy=1.0000 implied_reward_margin=0.1335 grad_norm=1.972 t=568.5s
+[standard] step 48 loss=0.7021 preference_accuracy=0.0000 implied_reward_margin=-0.0177 grad_norm=2.364 t=581.6s
+[standard] step 49 loss=0.6894 preference_accuracy=0.5000 implied_reward_margin=0.0076 grad_norm=2.231 t=595.9s
+[standard] step 50 loss=0.6148 preference_accuracy=1.0000 implied_reward_margin=0.1647 grad_norm=1.976 t=605.7s
+[standard] step 51 loss=0.6858 preference_accuracy=0.5000 implied_reward_margin=0.0183 grad_norm=2.175 t=617.0s
+[standard] step 52 loss=0.6412 preference_accuracy=1.0000 implied_reward_margin=0.1090 grad_norm=1.628 t=625.4s
+[standard] step 53 loss=0.6715 preference_accuracy=1.0000 implied_reward_margin=0.0441 grad_norm=2.079 t=635.7s
+[standard] step 54 loss=0.6555 preference_accuracy=1.0000 implied_reward_margin=0.0779 grad_norm=2.222 t=647.0s
+[standard] step 55 loss=0.7030 preference_accuracy=0.5000 implied_reward_margin=-0.0195 grad_norm=1.951 t=657.0s
+[standard] step 56 loss=0.6847 preference_accuracy=0.5000 implied_reward_margin=0.0171 grad_norm=2.067 t=668.6s
+[standard] step 57 loss=0.6178 preference_accuracy=1.0000 implied_reward_margin=0.1585 grad_norm=2.336 t=683.2s
+[standard] step 58 loss=0.6609 preference_accuracy=0.5000 implied_reward_margin=0.0669 grad_norm=1.996 t=692.8s
+[standard] step 59 loss=0.7058 preference_accuracy=0.5000 implied_reward_margin=-0.0242 grad_norm=1.920 t=704.0s
+[standard] step 60 loss=0.6825 preference_accuracy=1.0000 implied_reward_margin=0.0215 grad_norm=2.145 t=716.4s
+[standard] step 61 loss=0.7546 preference_accuracy=0.0000 implied_reward_margin=-0.1184 grad_norm=2.114 t=728.0s
+[standard] step 62 loss=0.6348 preference_accuracy=1.0000 implied_reward_margin=0.1230 grad_norm=2.185 t=738.8s
+[standard] step 63 loss=0.7251 preference_accuracy=0.0000 implied_reward_margin=-0.0628 grad_norm=2.150 t=751.2s
+[standard] step 64 loss=0.6505 preference_accuracy=1.0000 implied_reward_margin=0.0873 grad_norm=3.293 t=760.9s
+[standard] step 65 loss=0.7091 preference_accuracy=0.5000 implied_reward_margin=-0.0311 grad_norm=2.028 t=773.4s
+[standard] step 66 loss=0.6389 preference_accuracy=0.5000 implied_reward_margin=0.1151 grad_norm=1.914 t=783.3s
+[standard] step 67 loss=0.6626 preference_accuracy=1.0000 implied_reward_margin=0.0623 grad_norm=2.202 t=794.3s
+[standard] step 68 loss=0.6229 preference_accuracy=1.0000 implied_reward_margin=0.1459 grad_norm=1.978 t=803.8s
+[standard] step 69 loss=0.6957 preference_accuracy=0.5000 implied_reward_margin=-0.0051 grad_norm=2.053 t=814.4s
+[standard] step 70 loss=0.7174 preference_accuracy=0.5000 implied_reward_margin=-0.0449 grad_norm=2.191 t=826.4s
+[standard] step 71 loss=0.6636 preference_accuracy=0.5000 implied_reward_margin=0.0642 grad_norm=2.014 t=836.8s
+[standard] step 72 loss=0.6817 preference_accuracy=0.5000 implied_reward_margin=0.0242 grad_norm=1.985 t=847.0s
+[standard] step 73 loss=0.7293 preference_accuracy=0.5000 implied_reward_margin=-0.0696 grad_norm=2.090 t=856.3s
+[standard] step 74 loss=0.6817 preference_accuracy=0.5000 implied_reward_margin=0.0280 grad_norm=2.276 t=869.6s
+[standard] step 75 loss=0.7127 preference_accuracy=0.5000 implied_reward_margin=-0.0345 grad_norm=2.214 t=880.5s
+[standard] step 76 loss=0.7248 preference_accuracy=0.0000 implied_reward_margin=-0.0616 grad_norm=2.411 t=892.6s
+[standard] step 77 loss=0.6868 preference_accuracy=0.5000 implied_reward_margin=0.0128 grad_norm=2.074 t=902.6s
+[standard] step 78 loss=0.6457 preference_accuracy=0.5000 implied_reward_margin=0.1008 grad_norm=2.851 t=914.2s
+[standard] step 79 loss=0.6603 preference_accuracy=1.0000 implied_reward_margin=0.0679 grad_norm=2.124 t=926.4s
+[standard] step 80 loss=0.6839 preference_accuracy=0.5000 implied_reward_margin=0.0201 grad_norm=2.209 t=937.8s
+[standard] step 81 loss=0.6653 preference_accuracy=0.5000 implied_reward_margin=0.0582 grad_norm=2.187 t=947.8s
+[standard] step 82 loss=0.6739 preference_accuracy=1.0000 implied_reward_margin=0.0390 grad_norm=2.369 t=961.2s
+[standard] step 83 loss=0.5788 preference_accuracy=1.0000 implied_reward_margin=0.2435 grad_norm=2.250 t=972.9s
+[standard] step 84 loss=0.6670 preference_accuracy=0.5000 implied_reward_margin=0.0611 grad_norm=2.440 t=983.3s
+[standard] step 85 loss=0.6252 preference_accuracy=1.0000 implied_reward_margin=0.1417 grad_norm=1.831 t=992.3s
+[standard] step 86 loss=0.6441 preference_accuracy=1.0000 implied_reward_margin=0.1019 grad_norm=2.590 t=1003.9s
+[standard] step 87 loss=0.6784 preference_accuracy=0.5000 implied_reward_margin=0.0353 grad_norm=2.236 t=1015.7s
+[standard] step 88 loss=0.6408 preference_accuracy=1.0000 implied_reward_margin=0.1078 grad_norm=2.082 t=1026.1s
+[standard] step 89 loss=0.6656 preference_accuracy=1.0000 implied_reward_margin=0.0562 grad_norm=1.947 t=1036.7s
+[standard] step 90 loss=0.7642 preference_accuracy=0.0000 implied_reward_margin=-0.1371 grad_norm=2.366 t=1047.8s
+[standard] step 91 loss=0.6268 preference_accuracy=1.0000 implied_reward_margin=0.1376 grad_norm=1.566 t=1052.5s
+{
+  "run_name": "standard",
+  "adapter": "outputs\\task1_dpo\\standard",
+  "optimizer_steps": 91,
+  "wall_time_s": 1053.283,
+  "peak_vram_gb": 7.1496
+}

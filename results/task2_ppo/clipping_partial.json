@@ -1,0 +1,120 @@
+{
+  "cache_geometry": [
+    {
+      "epsilon": 0.05,
+      "clipped_surrogate_mean": -0.07149567109320693,
+      "unclipped_surrogate_mean": -0.007962414750118009,
+      "clip_fraction": 0.5034036759700476,
+      "affected_token_fraction": 0.5034036759700476,
+      "ratio_mean_abs_log_ratio": 0.4930833509673276,
+      "ratio_max_abs_log_ratio": 28.546571731567383,
+      "response_tokens": 8814
+    },
+    {
+      "epsilon": 0.2,
+      "clipped_surrogate_mean": -0.05170671619172266,
+      "unclipped_surrogate_mean": -0.007962414750118009,
+      "clip_fraction": 0.27422282732017245,
+      "affected_token_fraction": 0.27422282732017245,
+      "ratio_mean_abs_log_ratio": 0.4930833509673276,
+      "ratio_max_abs_log_ratio": 28.546571731567383,
+      "response_tokens": 8814
+    },
+    {
+      "epsilon": 0.5,
+      "clipped_surrogate_mean": -0.03177916932625378,
+      "unclipped_surrogate_mean": -0.007962414750118009,
+      "clip_fraction": 0.14000453823462672,
+      "affected_token_fraction": 0.14000453823462672,
+      "ratio_mean_abs_log_ratio": 0.4930833509673276,
+      "ratio_max_abs_log_ratio": 28.546571731567383,
+      "response_tokens": 8814
+    }
+  ],
+  "forks": [
+    {
+      "condition": "clip_0.05",
+      "clip_epsilon": 0.05,
+      "adapter": "outputs/task2_ppo/clip_0.05",
+      "heldout": {
+        "condition": "clip_0.05",
+        "adapter": "outputs/task2_ppo/clip_0.05",
+        "num_prompts": 20,
+        "eval_max_response_length": 768,
+        "reward_model_mean": 1.98651123046875,
+        "reward_model_mean_penalized": 1.88651123046875,
+        "kl_token_mean": 4.110238360226504e-05,
+        "entropy_token_mean": 0.7193963536992669,
+        "response_length_mean": 362.9,
+        "response_length_max": 768,
+        "eos_termination_rate": 0.9,
+        "truncation_rate": 0.1,
+        "samples_file": "results\\task2_ppo\\samples\\clip_0.05_generations.jsonl"
+      },
+      "stability": {
+        "reward_volatility_mean_abs_delta": 2.445521763392857,
+        "policy_loss_range": 0.0012183653634565417,
+        "policy_grad_norm_max": 2.3653522729873657,
+        "policy_grad_norm_mean": 0.6805648095905781,
+        "clip_fraction_mean": 0.0031250000465661287,
+        "kl_last_third_mean": -0.0003008058702107519
+      }
+    },
+    {
+      "condition": "clip_0.2",
+      "clip_epsilon": 0.2,
+      "adapter": "outputs/task2_ppo/clip_0.2",
+      "heldout": {
+        "condition": "clip_0.2",
+        "adapter": "outputs/task2_ppo/clip_0.2",
+        "num_prompts": 20,
+        "eval_max_response_length": 768,
+        "reward_model_mean": 1.951666259765625,
+        "reward_model_mean_penalized": 1.801666259765625,
+        "kl_token_mean": -0.00011473649938125164,
+        "entropy_token_mean": 0.7850057892501354,
+        "response_length_mean": 355.6,
+        "response_length_max": 768,
+        "eos_termination_rate": 0.85,
+        "truncation_rate": 0.15,
+        "samples_file": "results\\task2_ppo\\samples\\clip_0.2_generations.jsonl"
+      },
+      "stability": {
+        "reward_volatility_mean_abs_delta": 2.1053989955357144,
+        "policy_loss_range": 0.001179087528726086,
+        "policy_grad_norm_max": 2.370613932609558,
+        "policy_grad_norm_mean": 0.6920615471899509,
+        "clip_fraction_mean": 0.0,
+        "kl_last_third_mean": -0.0003934404667234048
+      }
+    },
+    {
+      "condition": "clip_0.5",
+      "clip_epsilon": 0.5,
+      "adapter": "outputs/task2_ppo/clip_0.5",
+      "heldout": {
+        "condition": "clip_0.5",
+        "adapter": "outputs/task2_ppo/clip_0.5",
+        "num_prompts": 20,
+        "eval_max_response_length": 768,
+        "reward_model_mean": 1.951666259765625,
+        "reward_model_mean_penalized": 1.801666259765625,
+        "kl_token_mean": -0.00011473649938125164,
+        "entropy_token_mean": 0.7850057892501354,
+        "response_length_mean": 355.6,
+        "response_length_max": 768,
+        "eos_termination_rate": 0.85,
+        "truncation_rate": 0.15,
+        "samples_file": "results\\task2_ppo\\samples\\clip_0.5_generations.jsonl"
+      },
+      "stability": {
+        "reward_volatility_mean_abs_delta": 2.1053989955357144,
+        "policy_loss_range": 0.001179087528726086,
+        "policy_grad_norm_max": 2.370613932609558,
+        "policy_grad_norm_mean": 0.6920615471899509,
+        "clip_fraction_mean": 0.0,
+        "kl_last_third_mean": -0.0003934404667234048
+      }
+    }
+  ]
+}

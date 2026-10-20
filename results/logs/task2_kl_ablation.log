@@ -1,0 +1,9 @@
+$ python -m task2_ppo.ablate_kl --eval-limit 20
+
+[reuse] kl_0: training is complete; re-running full held-out evaluation
+W1011 19:06:04.103000 3764 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[kl_0] n=20 reward=1.994 kl=-0.0001 len=7630.0 eos=0.800
+[done] kl_0: heldout_reward=1.994 kl=-0.0001
+=== beta_KL=0.1: 8-update continuation fork ===
+[vram] before loading the reward model: 1.13 / 7.93 GB used by this process and everything else (6.81 GB free). Anything else holding VRAM (a game, a browser) will starve the 8 GB card.
+[vram] after loading policy + critic: 6.83 / 7.93 GB used by this process and everything else (1.10 GB free). Anything else holding VRAM (a game, a browser) will starve the 8 GB card.

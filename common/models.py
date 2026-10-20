@@ -1,8 +1,19 @@
 from __future__ import annotations
 
 import gc
+import importlib.machinery
+import sys
+import types
 from contextlib import contextmanager
 from pathlib import Path
+
+for _mod in ("scipy.stats._levy_stable", "scipy.stats._levy_stable.levyst"):
+    if _mod not in sys.modules:
+        _m = types.ModuleType(_mod)
+        _m.__spec__ = importlib.machinery.ModuleSpec(_mod, None)
+        _m.levy_stable = None
+        _m.Nolan = None
+        sys.modules[_mod] = _m
 
 import torch
 from peft import LoraConfig, PeftModel, get_peft_model

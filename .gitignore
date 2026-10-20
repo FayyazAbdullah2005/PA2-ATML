@@ -28,3 +28,11 @@ data/*
 # Misc
 *.zip
 .DS_Store
+/backups/
+/HANDOFF.md
+/CODE_MAP.md
+/manual_task4_text.txt
+/report/*.bak
+/report/REVIEW_NOTES.md
+results/task4_safety/*backup*.csv
+

@@ -1,0 +1,44 @@
+$ python -m task2_ppo.analyze_clipping --eval-limit 20
+
+W1011 19:04:00.518000 42324 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task2_ppo\analyze_clipping.py:75: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  response = torch.tensor(ids[prompt_width:], dtype=torch.long)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task2_ppo\analyze_clipping.py", line 293, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task2_ppo\analyze_clipping.py", line 225, in main
+    batch = reconstruct_batch(cfg, rows, tokenizer, policy, value_model)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task2_ppo\analyze_clipping.py", line 123, in reconstruct_batch
+    raise KeyError(
+    ...<2 lines>...
+    )
+KeyError: 'The cached batch has no terminal learned reward, so the surrogate cannot be reconstructed. Reward-like keys found: none'
+Cached PPO rollouts: 32
+Cache keys: ['clipped_at_max', 'effective_terminal_reward', 'old_logprobs', 'prompt_id', 'raw_terminal_reward', 'ref_logprobs', 'response', 'response_tokens', 'source_index', 'terminated_with_eos', 'values']
+$ python -m task2_ppo.analyze_clipping --eval-limit 20 --resume
+
+W1011 19:05:31.483000 43420 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task2_ppo\analyze_clipping.py:75: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  response = torch.tensor(ids[prompt_width:], dtype=torch.long)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task2_ppo\analyze_clipping.py", line 293, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task2_ppo\analyze_clipping.py", line 225, in main
+    batch = reconstruct_batch(cfg, rows, tokenizer, policy, value_model)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task2_ppo\analyze_clipping.py", line 123, in reconstruct_batch
+    raise KeyError(
+    ...<2 lines>...
+    )
+KeyError: 'The cached batch has no terminal learned reward, so the surrogate cannot be reconstructed. Reward-like keys found: none'
+Cached PPO rollouts: 32
+Cache keys: ['clipped_at_max', 'effective_terminal_reward', 'old_logprobs', 'prompt_id', 'raw_terminal_reward', 'ref_logprobs', 'response', 'response_tokens', 'source_index', 'terminated_with_eos', 'values']

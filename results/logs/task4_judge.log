@@ -1,0 +1,87 @@
+$ python -m task4_safety.judge_responses
+
+C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\huggingface_hub\file_download.py:143: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\Abdul\.cache\huggingface\hub\models--Qwen--Qwen2.5-3B-Instruct. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+W1011 09:12:02.987000 42240 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|#####     | 1/2 [05:43<05:43, 343.79s/it]Fetching 2 files: 100%|##########| 2/2 [09:54<00:00, 297.10s/it]Fetching 2 files: 100%|##########| 2/2 [09:54<00:00, 297.10s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|#####     | 1/2 [00:04<00:04,  4.59s/it]Loading checkpoint shards: 100%|##########| 2/2 [00:07<00:00,  3.31s/it]Loading checkpoint shards: 100%|##########| 2/2 [00:07<00:00,  3.50s/it]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Fixed Task 4 judge loaded: Qwen/Qwen2.5-3B-Instruct
+  [sft] judged 25/450
+  [sft] judged 50/450
+  [sft] judged 75/450
+  [sft] judged 100/450
+  [sft] judged 125/450
+  [sft] judged 150/450
+  [sft] judged 175/450
+  [sft] judged 200/450
+  [sft] judged 225/450
+  [sft] judged 250/450
+  [sft] judged 275/450
+  [sft] judged 300/450
+  [sft] judged 325/450
+  [sft] judged 350/450
+  [sft] judged 375/450
+  [sft] judged 400/450
+  [sft] judged 425/450
+  [sft] judged 450/450
+wrote 450 judged rows -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task4_safety\judged_sft.jsonl {'JUSTIFIED_REFUSAL': 279, 'SAFE_ANSWER': 168, 'UNSAFE_COMPLIANCE': 3}
+  [dpo] judged 25/450
+  [dpo] judged 50/450
+  [dpo] judged 75/450
+  [dpo] judged 100/450
+  [dpo] judged 125/450
+  [dpo] judged 150/450
+  [dpo] judged 175/450
+  [dpo] judged 200/450
+  [dpo] judged 225/450
+  [dpo] judged 250/450
+  [dpo] judged 275/450
+  [dpo] judged 300/450
+  [dpo] judged 325/450
+  [dpo] judged 350/450
+  [dpo] judged 375/450
+  [dpo] judged 400/450
+  [dpo] judged 425/450
+  [dpo] judged 450/450
+wrote 450 judged rows -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task4_safety\judged_dpo.jsonl {'UNSAFE_COMPLIANCE': 3, 'SAFE_ANSWER': 167, 'JUSTIFIED_REFUSAL': 280}
+  [ppo] judged 25/450
+  [ppo] judged 50/450
+  [ppo] judged 75/450
+  [ppo] judged 100/450
+  [ppo] judged 125/450
+  [ppo] judged 150/450
+  [ppo] judged 175/450
+  [ppo] judged 200/450
+  [ppo] judged 225/450
+  [ppo] judged 250/450
+  [ppo] judged 275/450
+  [ppo] judged 300/450
+  [ppo] judged 325/450
+  [ppo] judged 350/450
+  [ppo] judged 375/450
+  [ppo] judged 400/450
+  [ppo] judged 425/450
+  [ppo] judged 450/450
+wrote 450 judged rows -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task4_safety\judged_ppo.jsonl {'JUSTIFIED_REFUSAL': 280, 'SAFE_ANSWER': 167, 'UNSAFE_COMPLIANCE': 3}
+  [grpo] judged 25/450
+  [grpo] judged 50/450
+  [grpo] judged 75/450
+  [grpo] judged 100/450
+  [grpo] judged 125/450
+  [grpo] judged 150/450
+  [grpo] judged 175/450
+  [grpo] judged 200/450
+  [grpo] judged 225/450
+  [grpo] judged 250/450
+  [grpo] judged 275/450
+  [grpo] judged 300/450
+  [grpo] judged 325/450
+  [grpo] judged 350/450
+  [grpo] judged 375/450
+  [grpo] judged 400/450
+  [grpo] judged 425/450
+  [grpo] judged 450/450
+wrote 450 judged rows -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task4_safety\judged_grpo.jsonl {'JUSTIFIED_REFUSAL': 277, 'SAFE_ANSWER': 170, 'UNSAFE_COMPLIANCE': 3}

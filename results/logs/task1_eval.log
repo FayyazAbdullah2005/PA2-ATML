@@ -1,0 +1,5 @@
+$ python -m task1_dpo.evaluate --adapter outputs/task1_dpo/standard --name standard --eval-prompt-limit 120
+
+W1011 13:55:47.660000 6540 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+dropped 10 held-out pairs whose prompt exceeds max_length=768
+[standard] pairs=120 acc=0.6583 loss=0.6681 kl=0.0003 reward=1.3789 len=165.4

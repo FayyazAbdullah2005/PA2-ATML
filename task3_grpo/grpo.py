@@ -9,12 +9,27 @@ def group_relative_advantages(rewards: torch.Tensor, group_ids: torch.Tensor, ep
     """Return one scalar advantage per sampled completion.
 
     `group_ids[i]` identifies which prompt produced reward `rewards[i]`.
-    Validate this implementation against the group-relative definition in the assignment manual.
+    Validated against the manual definition A_k = (r_k - mu_r) / (sigma_r + eps)
+    where mu_r and sigma_r are computed *within* the prompt group.
+
+    The release shipped a batch-wide mean/std. That is the wrong baseline twice
+    over: it (a) lets the reward level of one prompt shift the advantage of a
+    different prompt, and (b) removes the within-prompt comparison that is the
+    whole point of GRPO, since two prompt groups with identical relative
+    structure get different advantages. It also produces non-zero advantages for
+    groups whose rewards are all identical (an *uninformative* group) whenever a
+    different prompt in the batch happens to vary, which is exactly the case the
+    critic-free estimator is supposed to discard.
     """
-    # Starter implementation: students must validate the grouping logic carefully.
-    mean = rewards.mean()
-    std = rewards.std(unbiased=False).clamp_min(eps)
-    return (rewards - mean) / std
+
+    advantages = torch.zeros_like(rewards)
+    for gid in torch.unique(group_ids):
+        mask = group_ids == gid
+        group_rewards = rewards[mask]
+        mean = group_rewards.mean()
+        std = group_rewards.std(unbiased=False).clamp_min(eps)
+        advantages[mask] = (group_rewards - mean) / std
+    return advantages
 
 
 def grpo_policy_loss(

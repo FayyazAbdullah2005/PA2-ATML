@@ -1,0 +1,260 @@
+$ python -m task1_dpo.analyze_length
+
+[skip] length-balanced training already complete (C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task1_dpo\length_balanced_train_summary.json)
+=== evaluating standard on the length-stratified held-out set ===
+W1011 18:21:27.017000 24940 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+  matched_length   n=  80 acc=0.5875
+  preferred_longer n=  78 acc=0.4744
+  rejected_longer  n=  79 acc=0.6329
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task1_dpo\analyze_length.py", line 228, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task1_dpo\analyze_length.py", line 146, in main
+    rewards = protocol.reward_scores(*bundle["reward"](), prompts, rollouts["responses"])
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task1_dpo\protocol.py", line 254, in reward_scores
+    return [float(x) for x in score_reward_pairs(reward_model, reward_tokenizer, prompts, responses)]
+                              ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\common\generation.py", line 176, in score_reward_pairs
+    return rm_model(**enc).logits[:, 0].float()
+           ~~~~~~~~^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\utils\generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\modeling_layers.py", line 124, in forward
+    transformer_outputs: BaseModelOutputWithPast = getattr(self, self.base_model_prefix)(
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        input_ids,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\utils\generic.py", line 1064, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\models\qwen2\modeling_qwen2.py", line 384, in forward
+    hidden_states = decoder_layer(
+        hidden_states,
+    ...<6 lines>...
+        **kwargs,
+    )
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\models\qwen2\modeling_qwen2.py", line 249, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\models\qwen2\modeling_qwen2.py", line 46, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                                           ~~~~~~~~~~~~~~^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\nn\modules.py", line 1189, in forward
+    out = bnb.matmul(x, self.weight, bias=self.bias, state=self.state)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\autograd\_functions.py", line 404, in matmul
+    return MatMul8bitLt.apply(A, B, out, bias, state)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\autograd\function.py", line 596, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\autograd\_functions.py", line 162, in forward
+    output, subA = torch.ops.bitsandbytes.int8_mixed_scaled_mm(
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        A,
+        ^^
+    ...<5 lines>...
+        bias,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_ops.py", line 1269, in __call__
+    return self._op(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_dynamo\eval_frame.py", line 1263, in _fn
+    return fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\library.py", line 751, in func_no_dynamo
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\backends\default\ops.py", line 94, in _
+    output = torch.ops.bitsandbytes.int8_scaled_mm.default(CA, CB, SCA, SCB, bias=bias, dtype=A.dtype)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_ops.py", line 865, in __call__
+    return self._op(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_dynamo\eval_frame.py", line 1263, in _fn
+    return fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\library.py", line 751, in func_no_dynamo
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\backends\default\ops.py", line 112, in _
+    out_i32 = torch.ops.bitsandbytes.int8_linear_matmul.default(A, B)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_ops.py", line 865, in __call__
+    return self._op(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_dynamo\eval_frame.py", line 1263, in _fn
+    return fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\library.py", line 751, in func_no_dynamo
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\backends\cuda\ops.py", line 80, in _
+    out = torch.empty((*A.shape[:-1], B.shape[0]), device=A.device, dtype=torch.int32)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.46 GiB. GPU 0 has a total capacity of 7.93 GiB of which 0 bytes is free. Of the allocated memory 6.99 GiB is allocated by PyTorch, and 1.18 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+$ python -m task1_dpo.analyze_length
+
+[skip] length-balanced training already complete (C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task1_dpo\length_balanced_train_summary.json)
+=== evaluating standard on the length-stratified held-out set ===
+W1011 18:37:05.306000 41976 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+  matched_length   n=  80 acc=0.5875
+  preferred_longer n=  78 acc=0.4744
+  rejected_longer  n=  79 acc=0.6329
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task1_dpo\analyze_length.py", line 228, in <module>
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task1_dpo\analyze_length.py", line 146, in main
+    lengths = protocol.length_stats([r["response_tokens"] for r in records])
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\task1_dpo\protocol.py", line 254, in reward_scores
+    return [float(x) for x in score_reward_pairs(reward_model, reward_tokenizer, prompts, responses)]
+                              ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\common\generation.py", line 176, in score_reward_pairs
+    return rm_model(**enc).logits[:, 0].float()
+           ~~~~~~~~^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\utils\generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\modeling_layers.py", line 124, in forward
+    transformer_outputs: BaseModelOutputWithPast = getattr(self, self.base_model_prefix)(
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        input_ids,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\utils\generic.py", line 1064, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\models\qwen2\modeling_qwen2.py", line 384, in forward
+    hidden_states = decoder_layer(
+        hidden_states,
+    ...<6 lines>...
+        **kwargs,
+    )
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\models\qwen2\modeling_qwen2.py", line 249, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\transformers\models\qwen2\modeling_qwen2.py", line 46, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                                           ~~~~~~~~~~~~~~^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\nn\modules.py", line 1189, in forward
+    out = bnb.matmul(x, self.weight, bias=self.bias, state=self.state)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\autograd\_functions.py", line 404, in matmul
+    return MatMul8bitLt.apply(A, B, out, bias, state)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\autograd\function.py", line 596, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\autograd\_functions.py", line 162, in forward
+    output, subA = torch.ops.bitsandbytes.int8_mixed_scaled_mm(
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        A,
+        ^^
+    ...<5 lines>...
+        bias,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_ops.py", line 1269, in __call__
+    return self._op(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_dynamo\eval_frame.py", line 1263, in _fn
+    return fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\library.py", line 751, in func_no_dynamo
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\backends\default\ops.py", line 94, in _
+    output = torch.ops.bitsandbytes.int8_scaled_mm.default(CA, CB, SCA, SCB, bias=bias, dtype=A.dtype)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_ops.py", line 865, in __call__
+    return self._op(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_dynamo\eval_frame.py", line 1263, in _fn
+    return fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\library.py", line 751, in func_no_dynamo
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\backends\default\ops.py", line 112, in _
+    out_i32 = torch.ops.bitsandbytes.int8_linear_matmul.default(A, B)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_ops.py", line 865, in __call__
+    return self._op(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\_dynamo\eval_frame.py", line 1263, in _fn
+    return fn(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\library.py", line 751, in func_no_dynamo
+    return func(*args, **kwargs)
+  File "C:\Users\Abdul\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\bitsandbytes\backends\cuda\ops.py", line 80, in _
+    out = torch.empty((*A.shape[:-1], B.shape[0]), device=A.device, dtype=torch.int32)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.46 GiB. GPU 0 has a total capacity of 7.93 GiB of which 0 bytes is free. Of the allocated memory 6.99 GiB is allocated by PyTorch, and 1.18 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

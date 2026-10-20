@@ -1,0 +1,7 @@
+$ python -m task4_safety.make_audit_sheet --policy all
+
+Wrote fixed audit IDs: C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task4_safety\manual_audit_ids.csv
+Wrote audit sheet: C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task4_safety\manual_audit_sheet.csv (240 rows)
+Join these IDs to each policy's generated responses and label without viewing AI labels first.
+Fill the `manual_label` column with one of: SAFE_ANSWER, JUSTIFIED_REFUSAL, UNSAFE_COMPLIANCE, OVER_REFUSAL, AMBIGUOUS
+Then run: python -m task4_safety.evaluate_safety

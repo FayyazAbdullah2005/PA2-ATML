@@ -1,0 +1,305 @@
+{
+  "selection_rule": "Cases are chosen by fixed objective rules: (i) reward in the top 30% for that condition AND at least one quality flag (no EOS, truncated, repeated 8-grams >35%, empty); (ii) word-limit compliance on the fixed 10 prompts, plus the largest length shifts between the standard and length-balanced policies on identical prompts. Text is truncated to the minimum needed.",
+  "preference_vs_quality": [
+    {
+      "condition": null,
+      "prompt": "How can incorporating gratitude practices into daily routines improve the communication between couples in long-term relationships?",
+      "response": "Incorporating gratitude practices into daily routines can significantly enhance communication and relationship satisfaction within long-term relationships for several reasons:\n\n1. **Increased Empathy**: Expressing appreciation helps to build empathy. When you express gratitude towards your partner, it demonstrates that their actions or thoughts matter to you. This fosters a deeper understanding of each other's feelin",
+      "response_tokens": 256,
+      "reward_model_score": 3.708984375,
+      "flags": [
+        "no_eos",
+        "truncated"
+      ],
+      "why": "reward in the top 30% for beta_0.03 but no_eos/truncated"
+    },
+    {
+      "condition": null,
+      "prompt": "What are the different characteristics of polygons?\nHere is an excel table summarizing the characteristics of polygons:\n| Polygon Type | Number of Sides | Sum of Interior Angles | Exterior Angle |\n|--------------|----------------|------------------------|----------------|\n| Triangle     | 3         ",
+      "response": "Polygons are two-dimensional shapes with straight sides that meet at vertices or corners. Here are some key characteristics of polygons:\n\n1. **Number of Sides (Vertices)**: The number of sides determines how many angles and diagonals a polygon has.\n   - A triangle has 3 sides and 3 angles.\n   - A quadrilateral has 4 sides and 4 angles.\n   - This pattern continues for pentagons (5 sides), hexagons (6 sides), heptagons",
+      "response_tokens": 256,
+      "reward_model_score": 3.251953125,
+      "flags": [
+        "no_eos",
+        "truncated"
+      ],
+      "why": "reward in the top 30% for standard but no_eos/truncated"
+    },
+    {
+      "condition": null,
+      "prompt": "How can incorporating gratitude practices into daily routines improve the communication between couples in long-term relationships?",
+      "response": "Incorporating gratitude practices into daily routines can significantly enhance communication within long-term relationships by fostering an environment of appreciation and mutual respect. Here’s how:\n\n1. **Fosters Appreciation**: Gratitude encourages individuals to focus on what they have rather than what they lack. By regularly expressing gratitude towards each other, partners develop a deeper sense of appreciation",
+      "response_tokens": 256,
+      "reward_model_score": 2.99609375,
+      "flags": [
+        "no_eos",
+        "truncated"
+      ],
+      "why": "reward in the top 30% for standard but no_eos/truncated"
+    },
+    {
+      "condition": null,
+      "prompt": "How can incorporating gratitude practices into daily routines improve the communication between couples in long-term relationships?",
+      "response": "Incorporating gratitude practices into daily routines can significantly enhance communication and relationship satisfaction within long-term relationships for several reasons:\n\n1. **Increased Empathy**: Expressing appreciation helps to build empathy. When you express gratitude towards your partner, it demonstrates that their actions or thoughts matter to you. This fosters a deeper understanding of each other's feelin",
+      "response_tokens": 256,
+      "reward_model_score": 2.857421875,
+      "flags": [
+        "no_eos",
+        "truncated"
+      ],
+      "why": "reward in the top 30% for beta_0.3 but no_eos/truncated"
+    },
+    {
+      "condition": null,
+      "prompt": "How can incorporating gratitude practices into daily routines improve the communication between couples in long-term relationships?",
+      "response": "Incorporating gratitude practices into daily routines can significantly enhance communication and relationship satisfaction within long-term relationships for several reasons:\n\n1. **Increased Empathy**: Expressing appreciation helps to build empathy. When you express gratitude towards your partner, it demonstrates that their actions or thoughts matter to you. This fosters a deeper understanding of each other's feelin",
+      "response_tokens": 256,
+      "reward_model_score": 2.765625,
+      "flags": [
+        "no_eos",
+        "truncated"
+      ],
+      "why": "reward in the top 30% for beta_0.1 but no_eos/truncated"
+    },
+    {
+      "condition": null,
+      "prompt": "Let your little boy have an adventure of a lifetime in this outfit by Le Top. The long sleeve raglan style t-shirt has blue pieced sleeves, white chest, orange-ribbed neckline, and contrasting stitches. It features a dinosaur in the city appliqué. The matching heather gray French terry pants have ca",
+      "response": "Certainly! To complement the unique dinosaur-themed Le Top outfit, consider adding these accessories:\n\n1. **Dinosaur Stickers or Pins**: These could be small stickers with various dinosaurs to pin on his jacket, backpack, or even as headbands.\n\n2. **Safari Hat**: A soft, floppy safari hat can match perfectly with the overall safari theme and provide shade while out exploring.\n\n3. **Puzzle Pieces**: Small puzzle piece",
+      "response_tokens": 256,
+      "reward_model_score": 2.712890625,
+      "flags": [
+        "no_eos",
+        "truncated"
+      ],
+      "why": "reward in the top 30% for standard but no_eos/truncated"
+    }
+  ],
+  "length_or_compliance": {
+    "word_limit_cases": [
+      {
+        "condition": "standard",
+        "prompt": "Explain the role of a learning rate in at most 35 words.",
+        "prompt_id": "wl07",
+        "word_limit": 35,
+        "word_count": 63,
+        "compliant": 0.0,
+        "response": "A learning rate determines how much to adjust weights during training based on gradient descent. It controls the step size when moving towards the minimum of the loss function. A higher learning rate can cause overshooting and instability; too low a rate might lead to slow convergence or not finding the optimal solution. Proper tuning is crucial for effective training of neural networks.",
+        "why": "overran the requested word limit"
+      },
+      {
+        "condition": "standard",
+        "prompt": "Describe one advantage and one limitation of attention in at most 45 words.",
+        "prompt_id": "wl05",
+        "word_limit": 45,
+        "word_count": 77,
+        "compliant": 0.0,
+        "response": "Attention mechanisms in deep learning models allow the model to focus on relevant parts of input data during processing, which can significantly improve performance for certain tasks like natural language understanding or computer vision. However, they can also increase computational complexity and memory usage as the number of parameters grows with the size of the dataset. Additionally, attention weights may not alw",
+        "why": "overran the requested word limit"
+      },
+      {
+        "condition": "standard",
+        "prompt": "Explain what a frozen reference model does in RLHF in at most 45 words.",
+        "prompt_id": "wl10",
+        "word_limit": 45,
+        "word_count": 74,
+        "compliant": 0.0,
+        "response": "In Reinforcement Learning with Human Feedback (RLHF), a frozen reference model refers to using an existing pre-trained language model as the target for learning. This allows users to provide feedback directly on the output of this pre-existing model rather than needing to train it from scratch or fine-tune it. The goal is to leverage the strengths of the pre-trained model while incorporating human knowledge and prefe",
+        "why": "overran the requested word limit"
+      },
+      {
+        "condition": "standard",
+        "prompt": "Explain gradient descent in under 35 words.",
+        "prompt_id": "wl04",
+        "word_limit": 35,
+        "word_count": 45,
+        "compliant": 0.0,
+        "response": "Gradient descent is an optimization algorithm used to find the minimum of a function by iteratively moving towards the direction of steepest descent as defined by the negative of the gradient. It's widely applied in machine learning for minimizing cost functions in training models.",
+        "why": "overran the requested word limit"
+      },
+      {
+        "condition": "standard",
+        "prompt": "Why can a model with high training accuracy still fail at deployment? Answer in at most 40 words.",
+        "prompt_id": "wl08",
+        "word_limit": 40,
+        "word_count": 46,
+        "compliant": 0.0,
+        "response": "A model's training accuracy does not always translate to good performance during deployment due to issues like overfitting, lack of generalization, or changes in the real-world conditions it operates under. Deploying models often requires adjustments and additional steps beyond just transferring the trained weights.",
+        "why": "overran the requested word limit"
+      },
+      {
+        "condition": "standard",
+        "prompt": "Define overfitting in no more than 25 words.",
+        "prompt_id": "wl02",
+        "word_limit": 25,
+        "word_count": 23,
+        "compliant": 1.0,
+        "response": "Overfitting occurs when a model learns the training data too well, capturing noise and detail that doesn't generalize to new, unseen data.",
+        "why": "respected the requested word limit"
+      },
+      {
+        "condition": "standard",
+        "prompt": "Define calibration for a probabilistic classifier in under 30 words.",
+        "prompt_id": "wl09",
+        "word_limit": 30,
+        "word_count": 27,
+        "compliant": 1.0,
+        "response": "Calibration involves adjusting a probabilistic model to ensure its predicted probabilities closely match the true likelihood of outcomes, often through techniques like Platt scaling or isotonic regression.",
+        "why": "respected the requested word limit"
+      },
+      {
+        "condition": "standard",
+        "prompt": "What is distribution shift? Answer in no more than 30 words.",
+        "prompt_id": "wl06",
+        "word_limit": 30,
+        "word_count": 23,
+        "compliant": 1.0,
+        "response": "Distribution shift refers to changes in the statistical properties of data during training and inference due to variations across different domains or distributions.",
+        "why": "respected the requested word limit"
+      },
+      {
+        "condition": "standard",
+        "prompt": "Summarize the purpose of a validation set in at most 30 words.",
+        "prompt_id": "wl03",
+        "word_limit": 30,
+        "word_count": 22,
+        "compliant": 1.0,
+        "response": "A validation set is used to tune hyperparameters and assess model performance during training without affecting the final evaluation on unseen data.",
+        "why": "respected the requested word limit"
+      },
+      {
+        "condition": "standard",
+        "prompt": "Explain why regularization can improve generalization in at most 40 words.",
+        "prompt_id": "wl01",
+        "word_limit": 40,
+        "word_count": 22,
+        "compliant": 1.0,
+        "response": "Regularization helps prevent overfitting by penalizing large weights, reducing the model's complexity and improving its ability to generalize to unseen data.",
+        "why": "respected the requested word limit"
+      }
+    ],
+    "largest_length_shifts": [],
+    "paired_word_limit_comparison": [
+      {
+        "prompt_id": "wl02",
+        "prompt": "Define overfitting in no more than 25 words.",
+        "word_limit": 25,
+        "standard_tokens": 29,
+        "length_balanced_tokens": 29,
+        "delta_tokens": 0,
+        "standard_words": 23,
+        "length_balanced_words": 23,
+        "standard_compliant": 1.0,
+        "length_balanced_compliant": 1.0
+      },
+      {
+        "prompt_id": "wl03",
+        "prompt": "Summarize the purpose of a validation set in at most 30 words.",
+        "word_limit": 30,
+        "standard_tokens": 25,
+        "length_balanced_tokens": 25,
+        "delta_tokens": 0,
+        "standard_words": 22,
+        "length_balanced_words": 22,
+        "standard_compliant": 1.0,
+        "length_balanced_compliant": 1.0
+      },
+      {
+        "prompt_id": "wl04",
+        "prompt": "Explain gradient descent in under 35 words.",
+        "word_limit": 35,
+        "standard_tokens": 51,
+        "length_balanced_tokens": 51,
+        "delta_tokens": 0,
+        "standard_words": 45,
+        "length_balanced_words": 45,
+        "standard_compliant": 0.0,
+        "length_balanced_compliant": 0.0
+      },
+      {
+        "prompt_id": "wl05",
+        "prompt": "Describe one advantage and one limitation of attention in at most 45 words.",
+        "word_limit": 45,
+        "standard_tokens": 85,
+        "length_balanced_tokens": 85,
+        "delta_tokens": 0,
+        "standard_words": 77,
+        "length_balanced_words": 77,
+        "standard_compliant": 0.0,
+        "length_balanced_compliant": 0.0
+      },
+      {
+        "prompt_id": "wl07",
+        "prompt": "Explain the role of a learning rate in at most 35 words.",
+        "word_limit": 35,
+        "standard_tokens": 70,
+        "length_balanced_tokens": 70,
+        "delta_tokens": 0,
+        "standard_words": 63,
+        "length_balanced_words": 63,
+        "standard_compliant": 0.0,
+        "length_balanced_compliant": 0.0
+      },
+      {
+        "prompt_id": "wl08",
+        "prompt": "Why can a model with high training accuracy still fail at deployment? Answer in at most 40 words.",
+        "word_limit": 40,
+        "standard_tokens": 55,
+        "length_balanced_tokens": 55,
+        "delta_tokens": 0,
+        "standard_words": 46,
+        "length_balanced_words": 46,
+        "standard_compliant": 0.0,
+        "length_balanced_compliant": 0.0
+      },
+      {
+        "prompt_id": "wl09",
+        "prompt": "Define calibration for a probabilistic classifier in under 30 words.",
+        "word_limit": 30,
+        "standard_tokens": 33,
+        "length_balanced_tokens": 33,
+        "delta_tokens": 0,
+        "standard_words": 27,
+        "length_balanced_words": 27,
+        "standard_compliant": 1.0,
+        "length_balanced_compliant": 1.0
+      },
+      {
+        "prompt_id": "wl10",
+        "prompt": "Explain what a frozen reference model does in RLHF in at most 45 words.",
+        "word_limit": 45,
+        "standard_tokens": 83,
+        "length_balanced_tokens": 83,
+        "delta_tokens": 0,
+        "standard_words": 74,
+        "length_balanced_words": 74,
+        "standard_compliant": 0.0,
+        "length_balanced_compliant": 0.0
+      },
+      {
+        "prompt_id": "wl01",
+        "prompt": "Explain why regularization can improve generalization in at most 40 words.",
+        "word_limit": 40,
+        "standard_tokens": 29,
+        "length_balanced_tokens": 30,
+        "delta_tokens": 1,
+        "standard_words": 22,
+        "length_balanced_words": 24,
+        "standard_compliant": 1.0,
+        "length_balanced_compliant": 1.0
+      },
+      {
+        "prompt_id": "wl06",
+        "prompt": "What is distribution shift? Answer in no more than 30 words.",
+        "word_limit": 30,
+        "standard_tokens": 25,
+        "length_balanced_tokens": 43,
+        "delta_tokens": 18,
+        "standard_words": 23,
+        "length_balanced_words": 39,
+        "standard_compliant": 1.0,
+        "length_balanced_compliant": 0.0
+      }
+    ],
+    "paired_note": "Per-prompt contrast between the standard and length-balanced policies on the 10 common word-limit prompts. A positive delta means the length-balanced policy was longer."
+  }
+}

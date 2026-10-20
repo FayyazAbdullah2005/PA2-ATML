@@ -1,0 +1,111 @@
+$ python -m task1_dpo.ablate_beta --eval-prompt-limit 40
+
+[skip] beta_0.03: reusing the completed fork
+[done] beta_0.03: acc=0.6667 +/-0.0755 pairs=39
+=== beta=0.1 : training short fork (600 examples) ===
+W1011 16:39:16.957000 43728 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+dropped 54 rows whose prompt does not fit max_length=768
+[beta_0.1] step 1 loss=0.6931 preference_accuracy=0.0000 implied_reward_margin=0.0000 grad_norm=1.914 t=17.3s
+[beta_0.1] step 2 loss=0.6950 preference_accuracy=0.5000 implied_reward_margin=-0.0036 grad_norm=2.138 t=54.8s
+[beta_0.1] step 3 loss=0.6892 preference_accuracy=1.0000 implied_reward_margin=0.0080 grad_norm=1.755 t=81.0s
+[beta_0.1] step 4 loss=0.6891 preference_accuracy=0.5000 implied_reward_margin=0.0082 grad_norm=2.029 t=114.4s
+[beta_0.1] step 5 loss=0.6917 preference_accuracy=0.5000 implied_reward_margin=0.0030 grad_norm=2.278 t=193.8s
+[beta_0.1] step 6 loss=0.6916 preference_accuracy=0.5000 implied_reward_margin=0.0032 grad_norm=1.870 t=221.6s
+[beta_0.1] step 7 loss=0.7002 preference_accuracy=0.0000 implied_reward_margin=-0.0141 grad_norm=2.420 t=261.6s
+[beta_0.1] step 8 loss=0.6871 preference_accuracy=1.0000 implied_reward_margin=0.0122 grad_norm=2.285 t=289.6s
+[beta_0.1] step 9 loss=0.6900 preference_accuracy=1.0000 implied_reward_margin=0.0064 grad_norm=1.775 t=384.9s
+[beta_0.1] step 10 loss=0.6897 preference_accuracy=0.5000 implied_reward_margin=0.0069 grad_norm=1.899 t=441.3s
+[beta_0.1] step 11 loss=0.6851 preference_accuracy=0.5000 implied_reward_margin=0.0162 grad_norm=2.036 t=493.2s
+[beta_0.1] step 12 loss=0.6950 preference_accuracy=0.5000 implied_reward_margin=-0.0038 grad_norm=1.870 t=525.3s
+[beta_0.1] step 13 loss=0.6922 preference_accuracy=0.5000 implied_reward_margin=0.0022 grad_norm=2.162 t=565.4s
+[beta_0.1] step 14 loss=0.7037 preference_accuracy=0.0000 implied_reward_margin=-0.0209 grad_norm=1.897 t=578.6s
+[beta_0.1] step 15 loss=0.6891 preference_accuracy=0.5000 implied_reward_margin=0.0081 grad_norm=2.204 t=625.8s
+[beta_0.1] step 16 loss=0.6820 preference_accuracy=1.0000 implied_reward_margin=0.0224 grad_norm=1.911 t=640.3s
+[beta_0.1] step 17 loss=0.7030 preference_accuracy=0.5000 implied_reward_margin=-0.0193 grad_norm=2.290 t=660.3s
+[beta_0.1] step 18 loss=0.6928 preference_accuracy=0.5000 implied_reward_margin=0.0010 grad_norm=2.242 t=692.1s
+[beta_0.1] step 19 loss=0.6994 preference_accuracy=0.5000 implied_reward_margin=-0.0124 grad_norm=1.989 t=732.7s
+[beta_0.1] step 20 loss=0.6931 preference_accuracy=0.5000 implied_reward_margin=0.0001 grad_norm=1.902 t=790.7s
+[beta_0.1] step 21 loss=0.6845 preference_accuracy=1.0000 implied_reward_margin=0.0174 grad_norm=1.871 t=819.7s
+[beta_0.1] step 22 loss=0.7170 preference_accuracy=0.0000 implied_reward_margin=-0.0470 grad_norm=1.856 t=830.5s
+[beta_0.1] step 23 loss=0.7004 preference_accuracy=0.5000 implied_reward_margin=-0.0140 grad_norm=1.539 t=865.9s
+[beta_0.1] step 24 loss=0.6716 preference_accuracy=0.5000 implied_reward_margin=0.0443 grad_norm=2.088 t=911.6s
+[beta_0.1] step 25 loss=0.6726 preference_accuracy=0.5000 implied_reward_margin=0.0426 grad_norm=2.165 t=921.7s
+[beta_0.1] step 26 loss=0.6775 preference_accuracy=1.0000 implied_reward_margin=0.0315 grad_norm=2.000 t=999.4s
+[beta_0.1] step 27 loss=0.6817 preference_accuracy=1.0000 implied_reward_margin=0.0231 grad_norm=2.321 t=1030.5s
+[beta_0.1] step 28 loss=0.6991 preference_accuracy=0.0000 implied_reward_margin=-0.0119 grad_norm=2.021 t=1051.0s
+[beta_0.1] step 29 loss=0.7061 preference_accuracy=0.5000 implied_reward_margin=-0.0255 grad_norm=2.355 t=1092.9s
+[beta_0.1] step 30 loss=0.7000 preference_accuracy=0.5000 implied_reward_margin=-0.0132 grad_norm=2.076 t=1124.1s
+[beta_0.1] step 31 loss=0.6987 preference_accuracy=0.5000 implied_reward_margin=-0.0110 grad_norm=1.835 t=1136.3s
+[beta_0.1] step 32 loss=0.6904 preference_accuracy=0.5000 implied_reward_margin=0.0056 grad_norm=2.089 t=1175.6s
+[beta_0.1] step 33 loss=0.6636 preference_accuracy=1.0000 implied_reward_margin=0.0602 grad_norm=2.010 t=1189.6s
+[beta_0.1] step 34 loss=0.6996 preference_accuracy=0.0000 implied_reward_margin=-0.0129 grad_norm=1.999 t=1245.7s
+[beta_0.1] step 35 loss=0.7251 preference_accuracy=0.0000 implied_reward_margin=-0.0622 grad_norm=2.032 t=1269.9s
+[beta_0.1] step 36 loss=0.6874 preference_accuracy=0.5000 implied_reward_margin=0.0121 grad_norm=3.086 t=1283.6s
+[beta_0.1] step 37 loss=0.6682 preference_accuracy=1.0000 implied_reward_margin=0.0510 grad_norm=2.328 t=1327.2s
+[beta_0.1] step 38 loss=0.6971 preference_accuracy=0.5000 implied_reward_margin=-0.0078 grad_norm=1.223 t=1333.1s
+{
+  "run_name": "beta_0.1",
+  "adapter": "outputs\\task1_dpo\\beta_0.1",
+  "optimizer_steps": 38,
+  "wall_time_s": 1333.938,
+  "peak_vram_gb": 7.1467
+}
+=== beta=0.1 : evaluating on the common held-out set ===
+dropped 1 held-out pairs whose prompt exceeds max_length=768
+[beta_0.1] pairs=39 acc=0.6923 loss=0.6844 kl=0.0001 reward=1.1902 len=160.3
+[done] beta_0.1: acc=0.6923 +/-0.0739 pairs=39
+=== beta=0.3 : training short fork (600 examples) ===
+dropped 54 rows whose prompt does not fit max_length=768
+[beta_0.3] step 1 loss=0.6931 preference_accuracy=0.0000 implied_reward_margin=0.0000 grad_norm=5.737 t=14.3s
+[beta_0.3] step 2 loss=0.6835 preference_accuracy=1.0000 implied_reward_margin=0.0194 grad_norm=6.372 t=52.7s
+[beta_0.3] step 3 loss=0.6941 preference_accuracy=0.5000 implied_reward_margin=-0.0018 grad_norm=5.267 t=75.5s
+[beta_0.3] step 4 loss=0.6713 preference_accuracy=1.0000 implied_reward_margin=0.0447 grad_norm=6.065 t=110.9s
+[beta_0.3] step 5 loss=0.6917 preference_accuracy=0.5000 implied_reward_margin=0.0030 grad_norm=6.811 t=203.8s
+[beta_0.3] step 6 loss=0.6862 preference_accuracy=0.5000 implied_reward_margin=0.0160 grad_norm=5.583 t=228.6s
+[beta_0.3] step 7 loss=0.6880 preference_accuracy=0.5000 implied_reward_margin=0.0116 grad_norm=7.172 t=265.0s
+[beta_0.3] step 8 loss=0.6938 preference_accuracy=0.5000 implied_reward_margin=-0.0013 grad_norm=6.995 t=294.4s
+[beta_0.3] step 9 loss=0.7103 preference_accuracy=0.0000 implied_reward_margin=-0.0339 grad_norm=5.287 t=403.1s
+[beta_0.3] step 10 loss=0.6902 preference_accuracy=0.5000 implied_reward_margin=0.0061 grad_norm=5.682 t=435.1s
+[beta_0.3] step 11 loss=0.6689 preference_accuracy=1.0000 implied_reward_margin=0.0492 grad_norm=6.079 t=479.6s
+[beta_0.3] step 12 loss=0.6608 preference_accuracy=0.5000 implied_reward_margin=0.0684 grad_norm=5.471 t=509.7s
+[beta_0.3] step 13 loss=0.6798 preference_accuracy=0.5000 implied_reward_margin=0.0280 grad_norm=6.417 t=548.3s
+[beta_0.3] step 14 loss=0.7181 preference_accuracy=0.0000 implied_reward_margin=-0.0491 grad_norm=5.891 t=560.5s
+[beta_0.3] step 15 loss=0.6700 preference_accuracy=0.5000 implied_reward_margin=0.0476 grad_norm=6.377 t=614.2s
+[beta_0.3] step 16 loss=0.6539 preference_accuracy=1.0000 implied_reward_margin=0.0801 grad_norm=5.667 t=627.0s
+[beta_0.3] step 17 loss=0.7312 preference_accuracy=0.0000 implied_reward_margin=-0.0735 grad_norm=6.700 t=644.4s
+[beta_0.3] step 18 loss=0.6774 preference_accuracy=0.5000 implied_reward_margin=0.0338 grad_norm=6.610 t=674.5s
+[beta_0.3] step 19 loss=0.7060 preference_accuracy=0.5000 implied_reward_margin=-0.0248 grad_norm=5.945 t=707.5s
+[beta_0.3] step 20 loss=0.6757 preference_accuracy=1.0000 implied_reward_margin=0.0353 grad_norm=5.492 t=778.7s
+[beta_0.3] step 21 loss=0.6748 preference_accuracy=0.5000 implied_reward_margin=0.0387 grad_norm=5.637 t=807.2s
+[beta_0.3] step 22 loss=0.7752 preference_accuracy=0.0000 implied_reward_margin=-0.1578 grad_norm=5.737 t=815.3s
+[beta_0.3] step 23 loss=0.7143 preference_accuracy=0.5000 implied_reward_margin=-0.0381 grad_norm=4.500 t=846.7s
+[beta_0.3] step 24 loss=0.6448 preference_accuracy=0.5000 implied_reward_margin=0.1047 grad_norm=6.023 t=873.0s
+[beta_0.3] step 25 loss=0.6568 preference_accuracy=0.5000 implied_reward_margin=0.0822 grad_norm=6.182 t=882.1s
+[beta_0.3] step 26 loss=0.6483 preference_accuracy=1.0000 implied_reward_margin=0.0918 grad_norm=5.719 t=974.1s
+[beta_0.3] step 27 loss=0.6669 preference_accuracy=1.0000 implied_reward_margin=0.0535 grad_norm=6.907 t=1003.0s
+[beta_0.3] step 28 loss=0.7108 preference_accuracy=0.0000 implied_reward_margin=-0.0349 grad_norm=6.054 t=1017.0s
+[beta_0.3] step 29 loss=0.7102 preference_accuracy=0.5000 implied_reward_margin=-0.0324 grad_norm=7.044 t=1058.7s
+[beta_0.3] step 30 loss=0.7142 preference_accuracy=0.5000 implied_reward_margin=-0.0384 grad_norm=6.321 t=1088.2s
+[beta_0.3] step 31 loss=0.6973 preference_accuracy=0.5000 implied_reward_margin=-0.0055 grad_norm=5.391 t=1097.8s
+[beta_0.3] step 32 loss=0.6922 preference_accuracy=0.5000 implied_reward_margin=0.0031 grad_norm=6.096 t=1144.9s
+[beta_0.3] step 33 loss=0.6370 preference_accuracy=1.0000 implied_reward_margin=0.1160 grad_norm=5.834 t=1157.5s
+[beta_0.3] step 34 loss=0.7303 preference_accuracy=0.0000 implied_reward_margin=-0.0722 grad_norm=5.936 t=1183.0s
+[beta_0.3] step 35 loss=0.7694 preference_accuracy=0.0000 implied_reward_margin=-0.1445 grad_norm=6.103 t=1212.2s
+[beta_0.3] step 36 loss=0.6989 preference_accuracy=0.5000 implied_reward_margin=-0.0094 grad_norm=9.876 t=1224.6s
+[beta_0.3] step 37 loss=0.6170 preference_accuracy=1.0000 implied_reward_margin=0.1625 grad_norm=6.696 t=1268.3s
+[beta_0.3] step 38 loss=0.7088 preference_accuracy=0.0000 implied_reward_margin=-0.0310 grad_norm=3.612 t=1273.6s
+{
+  "run_name": "beta_0.3",
+  "adapter": "outputs\\task1_dpo\\beta_0.3",
+  "optimizer_steps": 38,
+  "wall_time_s": 1274.413,
+  "peak_vram_gb": 7.1465
+}
+=== beta=0.3 : evaluating on the common held-out set ===
+dropped 1 held-out pairs whose prompt exceeds max_length=768
+[beta_0.3] pairs=39 acc=0.6923 loss=0.6691 kl=0.0001 reward=1.1038 len=160.9
+[done] beta_0.3: acc=0.6923 +/-0.0739 pairs=39
+saved -> C:\Users\Abdul\OneDrive\Desktop\LMS_Courses\2601 SSE Advanced Topics in Machine Lea (CS 6304 S1-Lecture)\Assignments\Programming Assignment 2\ATML-PA2-LLM-PostTraining\results\task1_dpo\beta_ablation.json
+beta=0.03  acc=0.6667 loss=0.6902 kl=-0.0001 reward=1.151 len=160.8
+beta=0.1   acc=0.6923 loss=0.6844 kl=0.0001 reward=1.190 len=160.3
+beta=0.3   acc=0.6923 loss=0.6691 kl=0.0001 reward=1.104 len=160.9

@@ -1,0 +1,15 @@
+{
+  "condition": "standard",
+  "adapter": "outputs/task2_ppo/standard",
+  "num_prompts": 40,
+  "eval_max_response_length": 768,
+  "reward_model_mean": 1.4793968200683594,
+  "reward_model_mean_penalized": 1.3793968200683593,
+  "kl_token_mean": 0.000169825765698306,
+  "entropy_token_mean": 0.7167013830505311,
+  "response_length_mean": 314.0,
+  "response_length_max": 768,
+  "eos_termination_rate": 0.9,
+  "truncation_rate": 0.1,
+  "samples_file": "results\\task2_ppo\\samples\\standard_generations.jsonl"
+}
